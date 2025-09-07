@@ -124,13 +124,18 @@
     }
     /* Why Use Us stylings */
     .whyus-section {
-      background: #fff;
-      border-radius: 8px;
-      max-width: 500px;
+      background: #f2f3f5;
+      border-radius: 10px 10px 0 0;
+      box-shadow: 0 2px 8px rgba(34,67,86,.09);
+      max-width: 600px;
       margin: 2.5em auto 0;
-      box-shadow: 0 2px 8px rgba(34,67,86,0.09);
-      padding: 1.5em 1em;
+      padding: 2em 1.2em 2.2em 1.2em;
       text-align: left;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-bottom: none;
     }
     .whyus-section h2 {
       color: #00274C;
@@ -138,6 +143,28 @@
       font-size: 1.2em;
       letter-spacing: 0.01em;
     }
+    .whyus-bar {
+      width: 100%;
+      height: 16px;
+      background: #FFCB05;
+      border-radius: 0 0 10px 10px;
+      margin: 0;
+      display: block;
+      position: absolute;
+      bottom: 0; left: 0;
+    }
+    .whyus-section a {
+      color: #00274C;
+      font-weight: bold;
+      text-decoration: underline;
+      transition: color .2s;
+    }
+    .whyus-section a:hover,
+    .whyus-section a:focus {
+      color: #FFCB05;
+      outline: none;
+    }
+
     h2 {
       color: var(--header-bg);
       font-size: 1.7rem;
@@ -248,6 +275,11 @@
       .card-col {
         max-width: 100%;
       }
+      .whyus-section {
+        max-width: 98%;
+        padding: 1.3em 0.6em 2.1em 0.6em;
+      }
+      .whyus-bar { height: 12px; }
     }
   </style>
 </head>
@@ -284,8 +316,13 @@
       <p>
         At 2nd Street Appraisal, we go beyond traditional valuation services with our custom-built software, <strong>appraisalToolbox</strong>. This innovative platform powers more efficient and accurate asset projections, giving our team and clients the ability to track appraisal progress, manage documentation, and collaborate with ease.
         <br><br>
-        appraisalToolbox seamlessly integrates market data and advanced analytics, ensuring each report is delivered quickly while maintaining the highest standards of reliability. Choose us for leading-edge technology, transparency at every stage, and confidence in results that support your decision-making.
+        appraisalToolbox seamlessly integrates market data and advanced analytics, ensuring each report is delivered quickly while maintaining the highest standards of reliability. We’re proud to offer <strong>live demos</strong> of appraisalToolbox—so you can experience its features, transparency, and ease of use before you commit.
+        <br><br>
+        Choose us for leading-edge technology, transparent communication at every stage, and confidence in results that support your decision-making.
+        <br><br>
+        <a href="#contact">Contact us to schedule a live demo today!</a>
       </p>
+      <span class="whyus-bar"></span>
     </div>
   </div>
   <div id="panel-about" class="tab-section" role="tabpanel" aria-labelledby="tab-about" tabindex="0">
@@ -449,4 +486,5 @@
     });
   </script>
 </body>
+</html
 </html>
