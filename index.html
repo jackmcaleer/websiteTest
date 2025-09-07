@@ -12,6 +12,7 @@
       --header-bg: var(--umich-blue);
       --header-accent: var(--umich-maize);
       --text-on-dark: #fff;
+      --main-box-width: 650px;
     }
     body {
       font-family: 'Open Sans', Arial, sans-serif;
@@ -94,15 +95,35 @@
     .tab-section.active {
       display: block;
     }
-    /* Home hero section cleanup */
+
+    /* SPECIAL: Remove background and extra padding for Home tab */
+    #panel-home.tab-section {
+      background: none;
+      box-shadow: none;
+      padding: 0;
+      max-width: none;
+      margin: 0;
+    }
+
+    /* Home hero section (box) and Why Us (box): Matching widths, margin, centering */
+    .homepage-hero,
+    .whyus-section {
+      max-width: var(--main-box-width);
+      margin: 2.5em auto 0 auto;
+      border-radius: 10px 10px 0 0;
+      box-shadow: 0 2px 8px rgba(34,67,86,0.08);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+
     .homepage-hero {
       background: #f6f6f8;
-      border-radius: 9px;
       padding: 2.5rem 1.2rem 2rem 1.2rem;
-      box-shadow: 0 2px 8px rgba(34,67,86,0.08);
-      max-width: 700px;
-      margin: 1.5em auto 0 auto;
       text-align: center;
+      border-radius: 10px 10px 0 0;
+      margin-bottom: 0.2em;
     }
     .homepage-hero h1 {
       font-size: 2.3rem;
@@ -124,17 +145,14 @@
       margin-top: 1.35rem;
       margin-bottom: 0;
     }
+
     .whyus-section {
       background: #f2f3f5;
-      border-radius: 10px 10px 0 0;
+      border-radius: 0 0 10px 10px;
       box-shadow: 0 2px 8px rgba(34,67,86,.09);
-      max-width: 600px;
-      margin: 2.2em auto 0;
       padding: 2em 1.2em 2.2em 1.2em;
       text-align: left;
       position: relative;
-      display: flex;
-      flex-direction: column;
       justify-content: space-between;
     }
     .whyus-section h2 {
@@ -143,6 +161,8 @@
       font-size: 1.22em;
       letter-spacing: 0.01em;
       margin-bottom: 0.7em;
+      text-align: left;
+      align-self: flex-start;
     }
     .whyus-bar {
       width: 100%;
@@ -152,7 +172,8 @@
       margin: 0;
       display: block;
       position: absolute;
-      bottom: 0; left: 0;
+      left: 0;
+      bottom: 0;
     }
     .whyus-section a {
       color: #00274C;
@@ -165,6 +186,10 @@
       color: #FFCB05;
       outline: none;
     }
+    .whyus-section p {
+      margin-bottom: 2.1em;
+    }
+
     h2 {
       color: var(--header-bg);
       font-size: 1.7rem;
@@ -240,6 +265,43 @@
       min-width: 190px;
       max-width: 50%;
     }
+    /* TEAM GALLERY */
+    .team-gallery {
+      display: flex;
+      gap: 2.4rem;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      margin-top: 2.3rem;
+    }
+    .team-member {
+      flex: 1 1 160px;
+      min-width: 160px;
+      max-width: 220px;
+      text-align: center;
+    }
+    .team-member img {
+      width: 100%;
+      max-width: 145px;
+      aspect-ratio: 1/1;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 0.7em;
+      border: 3px solid #00274C33;
+      box-shadow: 0 2px 8px rgba(34,67,86,0.13);
+    }
+    .team-member .member-name {
+      color: #00274C;
+      font-weight: 700;
+      font-size: 1.08em;
+      margin-bottom: 0.1em;
+    }
+    .team-member .member-title {
+      color: #234356;
+      font-size: 1em;
+      font-weight: 400;
+    }
+
     @media (max-width: 900px) {
       .tab-section, .hero {
         max-width: 100%;
@@ -265,9 +327,9 @@
         margin: 0 0.3rem;
         font-size: 0.98rem;
       }
-      .homepage-hero {
+      .homepage-hero, .whyus-section {
         padding: 1.3rem 0.6rem 1rem 0.6rem;
-        max-width: 97vw;
+        max-width: 98vw;
       }
       .hero-tagline { font-size: 1rem; }
       .hero-lead { font-size: 1em; }
@@ -278,9 +340,15 @@
       .card-col {
         max-width: 100%;
       }
-      .whyus-section {
-        max-width: 98%;
-        padding: 1.3em 0.6em 2.1em 0.6em;
+      .team-gallery {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.4rem;
+      }
+      .team-member {
+        width: 100%;
+        min-width: 0;
+        max-width: 260px;
       }
       .whyus-bar { height: 12px; }
     }
@@ -336,6 +404,24 @@
       With years of experience, we deliver accurate, timely, and professional appraisals for residential and commercial properties. 
       Our team is committed to integrity, transparency, and excellence in every assignment.
     </p>
+    <div class="team-gallery">
+      <div class="team-member">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="John Doe headshot">
+        <div class="member-name">John Doe</div>
+        <div class="member-title">Founder & CEO</div>
+      </div>
+      <div class="team-member">
+        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Jane Smith headshot">
+        <div class="member-name">Jane Smith</div>
+        <div class="member-title">Senior Appraiser</div>
+      </div>
+      <div class="team-member">
+        <img src="https://randomuser.me/api/portraits/men/56.jpg" alt="Robert Lee headshot">
+        <div class="member-name">Robert Lee</div>
+        <div class="member-title">Lead Software Engineer</div>
+      </div>
+      <!-- Add more team-member blocks as needed -->
+    </div>
   </div>
   <div id="panel-services" class="tab-section" role="tabpanel" aria-labelledby="tab-services" tabindex="0">
     <h2>Services</h2>
