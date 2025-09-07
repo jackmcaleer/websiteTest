@@ -181,9 +181,21 @@
     .service-card .subtitle {
       font-weight: bold;
       color: var(--umich-blue);
-      margin-bottom: 0.1em;
-      margin-top: 0.8em;
+      margin-bottom: 0.2em;
+      margin-top: 0.5em;
       font-size: 1.07em;
+    }
+    .card-details {
+      display: flex;
+      gap: 2.5rem;
+      margin-top: 1em;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+    .card-col {
+      flex: 1 1 220px;
+      min-width: 190px;
+      max-width: 50%;
     }
     @media (max-width: 900px) {
       .tab-section, .hero {
@@ -212,6 +224,13 @@
       }
       .hero h1 {
         font-size: 1.6rem;
+      }
+      .card-details {
+        flex-direction: column;
+        gap: 1.3rem;
+      }
+      .card-col {
+        max-width: 100%;
       }
     }
   </style>
@@ -248,7 +267,9 @@
   <div id="panel-about" class="tab-section" role="tabpanel" aria-labelledby="tab-about" tabindex="0">
     <h2>About Us</h2>
     <p>
-      fill in
+      2nd Street Appraisal is a trusted provider of real estate valuation services. 
+      With years of experience, we deliver accurate, timely, and professional appraisals for residential and commercial properties. 
+      Our team is committed to integrity, transparency, and excellence in every assignment.
     </p>
   </div>
   <div id="panel-services" class="tab-section" role="tabpanel" aria-labelledby="tab-services" tabindex="0">
@@ -261,75 +282,87 @@
           To ensure credibility, every appraisal undergoes a meticulous review process by an Accredited Senior Appraiser affiliated with the American Society of Appraisers. With a commitment to thoroughness, we provide tailored and trustworthy valuation services that meet your specific needs.
           Choose Irontrax for a dedicated team that combines extensive experience with the highest standards, offering confidence in the accuracy of your asset valuations.
         </p>
-        <div class="subtitle">What we do</div>
-        <ul>
-          <li>Inventory Appraisals</li>
-          <li>Equipment Appraisals</li>
-          <li>Physical Inspection</li>
-          <li>Desktop Appraisals</li>
-          <li>Future Value Projections - Equipment</li>
-          <li>Depreciation Studies</li>
-          <li>Intangible Valuations</li>
-          <li>Real Estate Appraisals</li>
-          <li>Lease End Inspections</li>
-          <li>Physical Asset Inspections</li>
-          <li>…and more!</li>
-        </ul>
-        <div class="subtitle">When we do it</div>
-        <ul>
-          <li>Advisory</li>
-          <li>Bankruptcy</li>
-          <li>Business Planning</li>
-          <li>Employee Stock Option Planning (ESOP)</li>
-          <li>Financial Reporting/Audit Review</li>
-          <li>Financing</li>
-          <li>Insurance</li>
-          <li>Litigation Support</li>
-          <li>Liquidations</li>
-          <li>Mergers &amp; Acquisitions</li>
-          <li>Sale &amp; Leaseback</li>
-          <li>Tax Advisory</li>
-          <li>...and more!</li>
-        </ul>
+        <div class="card-details">
+          <div class="card-col">
+            <div class="subtitle">What we do</div>
+            <ul>
+              <li>Inventory Appraisals</li>
+              <li>Equipment Appraisals</li>
+              <li>Physical Inspection</li>
+              <li>Desktop Appraisals</li>
+              <li>Future Value Projections - Equipment</li>
+              <li>Depreciation Studies</li>
+              <li>Intangible Valuations</li>
+              <li>Real Estate Appraisals</li>
+              <li>Lease End Inspections</li>
+              <li>Physical Asset Inspections</li>
+              <li>…and more!</li>
+            </ul>
+          </div>
+          <div class="card-col">
+            <div class="subtitle">When we do it</div>
+            <ul>
+              <li>Advisory</li>
+              <li>Bankruptcy</li>
+              <li>Business Planning</li>
+              <li>Employee Stock Option Planning (ESOP)</li>
+              <li>Financial Reporting/Audit Review</li>
+              <li>Financing</li>
+              <li>Insurance</li>
+              <li>Litigation Support</li>
+              <li>Liquidations</li>
+              <li>Mergers &amp; Acquisitions</li>
+              <li>Sale &amp; Leaseback</li>
+              <li>Tax Advisory</li>
+              <li>...and more!</li>
+            </ul>
+          </div>
+        </div>
       </section>
       <section class="service-card">
         <h3>Advisory</h3>
         <p>
-          Our experience in dealing with fixed assets across a wide spectrum of industries has equipped us with a profound understanding of the unique challenges and opportunities present in various sectors.
+          With a combined 250+ years of experience, Irontrax professionals have earned the trust of our clients. Our extensive experience in dealing with fixed assets across a wide spectrum of industries has equipped us with a profound understanding of the unique challenges and opportunities present in various sectors.
           This depth of insight allows us to not only understand the intricacies of your specific challenges but also to offer innovative solutions that consistently deliver tangible results.
           At Irontrax, you can rely on our expertise to meet your challenges with a history of proven excellence.
         </p>
-        <div class="subtitle">What we do</div>
-        <ul>
-          <li>Future Value Projections</li>
-          <li>Asset Disposition</li>
-          <li>Lease End Inspections</li>
-          <li>Equipment Inspections</li>
-          <li>Asset Remarketing</li>
-          <li>Case Studies</li>
-          <li>Matrices</li>
-          <li>Bankruptcy</li>
-          <li>M&amp;A</li>
-          <li>Portfolio Review</li>
-          <li>Physical Asset Inspections</li>
-          <li>Repossession of Assets</li>
-          <li>Depreciation Studies</li>
-          <li>White Papers</li>
-          <li>and more!</li>
-        </ul>
-        <div class="subtitle">When we do it</div>
-        <ul>
-          <li>Accounting</li>
-          <li>Bankruptcy</li>
-          <li>Business Planning</li>
-          <li>Employee Stock Option Planning (ESOP)</li>
-          <li>Financial Planning</li>
-          <li>Leasing</li>
-          <li>Litigation Support</li>
-          <li>Mergers &amp; Acquisitions</li>
-          <li>Tax Advisory</li>
-          <li>...and more!</li>
-        </ul>
+        <div class="card-details">
+          <div class="card-col">
+            <div class="subtitle">What we do</div>
+            <ul>
+              <li>Future Value Projections</li>
+              <li>Asset Disposition</li>
+              <li>Lease End Inspections</li>
+              <li>Equipment Inspections</li>
+              <li>Asset Remarketing</li>
+              <li>Case Studies</li>
+              <li>Matrices</li>
+              <li>Bankruptcy</li>
+              <li>M&amp;A</li>
+              <li>Portfolio Review</li>
+              <li>Physical Asset Inspections</li>
+              <li>Repossession of Assets</li>
+              <li>Depreciation Studies</li>
+              <li>White Papers</li>
+              <li>and more!</li>
+            </ul>
+          </div>
+          <div class="card-col">
+            <div class="subtitle">When we do it</div>
+            <ul>
+              <li>Accounting</li>
+              <li>Bankruptcy</li>
+              <li>Business Planning</li>
+              <li>Employee Stock Option Planning (ESOP)</li>
+              <li>Financial Planning</li>
+              <li>Leasing</li>
+              <li>Litigation Support</li>
+              <li>Mergers &amp; Acquisitions</li>
+              <li>Tax Advisory</li>
+              <li>...and more!</li>
+            </ul>
+          </div>
+        </div>
       </section>
     </div>
   </div>
