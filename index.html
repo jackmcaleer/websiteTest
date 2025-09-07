@@ -79,7 +79,7 @@
     }
     .tab-section {
       display: none;
-      max-width: 800px;
+      max-width: 900px;
       margin: 2rem auto;
       background: white;
       padding: 2rem;
@@ -99,7 +99,7 @@
       text-align: center;
       padding: 3rem 1rem 2rem;
       border-bottom: 4px solid var(--header-accent);
-      max-width: 800px;
+      max-width: 900px;
       margin: 2rem auto 0;
       border-radius: 8px 8px 0 0;
       box-shadow: 0 2px 8px rgba(34,67,86,0.05);
@@ -148,17 +148,18 @@
       color: #5c5c5c;
       margin: 1em 0 0 0;
     }
-    /* --- Service cards --- */
+
+    /* --- Service cards: horizontal default, stack on mobile --- */
     .service-cards {
       display: flex;
-      flex-wrap: wrap;
+      flex-direction: row;
       gap: 2rem;
+      justify-content: center;
+      align-items: stretch;
       margin-top: 1rem;
       margin-bottom: 1rem;
-      justify-content: space-between;
     }
     .service-card {
-      flex: 1 1 330px;
       background: #f6f6f8;
       border-radius: 9px;
       border: 2px solid var(--umich-maize);
@@ -166,7 +167,10 @@
       padding: 1.3rem 1.2rem 1rem;
       min-width: 300px;
       max-width: 420px;
-      margin: 0 auto;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      margin: 0;
     }
     .service-card h3 {
       margin-top: 0;
@@ -188,10 +192,10 @@
       .service-cards {
         flex-direction: column;
         gap: 1.2rem;
+        max-width: 100%;
       }
       .service-card {
         min-width: 0;
-        width: 100%;
         max-width: 100%;
       }
     }
@@ -302,9 +306,9 @@
       <section class="service-card">
         <h3>Advisory</h3>
         <p>
-          With a combined 250+ years of experience, Irontrax professionals have earned the trust of our clients. Our extensive experience in dealing with fixed assets across a wide spectrum of industries has equipped us with a profound understanding of the unique challenges and opportunities present in various sectors.
+          Our experience in dealing with fixed assets across a wide spectrum of industries has equipped us with a profound understanding of the unique challenges and opportunities present in various sectors.
           This depth of insight allows us to not only understand the intricacies of your specific challenges but also to offer innovative solutions that consistently deliver tangible results.
-          At Irontrax, you can rely on our expertise to meet your challenges with a history of proven excellence.
+          You can rely on our expertise to meet your challenges with a history of proven excellence.
         </p>
         <div class="subtitle">What we do</div>
         <ul>
