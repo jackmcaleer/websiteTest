@@ -95,8 +95,7 @@
     .tab-section.active {
       display: block;
     }
-
-    /* SPECIAL: Remove background and extra padding for Home tab */
+    /* Home special layout */
     #panel-home.tab-section {
       background: none;
       box-shadow: none;
@@ -104,8 +103,6 @@
       max-width: none;
       margin: 0;
     }
-
-    /* Home hero section (box) and Why Us (box): Matching widths, margin, centering */
     .homepage-hero,
     .whyus-section {
       max-width: var(--main-box-width);
@@ -117,7 +114,6 @@
       align-items: center;
       width: 100%;
     }
-
     .homepage-hero {
       background: #f6f6f8;
       padding: 2.5rem 1.2rem 2rem 1.2rem;
@@ -145,7 +141,6 @@
       margin-top: 1.35rem;
       margin-bottom: 0;
     }
-
     .whyus-section {
       background: #f2f3f5;
       border-radius: 0 0 10px 10px;
@@ -154,6 +149,7 @@
       text-align: left;
       position: relative;
       justify-content: space-between;
+      min-height: 170px;
     }
     .whyus-section h2 {
       color: #00274C;
@@ -189,7 +185,6 @@
     .whyus-section p {
       margin-bottom: 2.1em;
     }
-
     h2 {
       color: var(--header-bg);
       font-size: 1.7rem;
@@ -265,43 +260,49 @@
       min-width: 190px;
       max-width: 50%;
     }
-    /* TEAM GALLERY */
+    /* TEAM GALLERY with greyed-out images */
     .team-gallery {
       display: flex;
       gap: 2.4rem;
-      justify-content: flex-start;
+      justify-content: center;
       align-items: flex-start;
       flex-wrap: wrap;
       margin-top: 2.3rem;
     }
     .team-member {
-      flex: 1 1 160px;
+      flex: 0 1 160px;
       min-width: 160px;
       max-width: 220px;
       text-align: center;
     }
     .team-member img {
       width: 100%;
-      max-width: 145px;
+      max-width: 120px;
       aspect-ratio: 1/1;
       border-radius: 50%;
       object-fit: cover;
       margin-bottom: 0.7em;
       border: 3px solid #00274C33;
       box-shadow: 0 2px 8px rgba(34,67,86,0.13);
+      filter: grayscale(100%);
+      background: #e4e4e4;
+      transition: filter 0.25s;
     }
-    .team-member .member-name {
+    .team-member img:hover,
+    .team-member img:focus {
+      filter: grayscale(0%);
+    }
+    .member-name {
       color: #00274C;
       font-weight: 700;
       font-size: 1.08em;
       margin-bottom: 0.1em;
     }
-    .team-member .member-title {
+    .member-title {
       color: #234356;
       font-size: 1em;
       font-weight: 400;
     }
-
     @media (max-width: 900px) {
       .tab-section, .hero {
         max-width: 100%;
@@ -406,21 +407,15 @@
     </p>
     <div class="team-gallery">
       <div class="team-member">
-        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="John Doe headshot">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png" alt="Default user avatar">
         <div class="member-name">John Doe</div>
-        <div class="member-title">Founder & CEO</div>
+        <div class="member-title">Founder &amp; CEO</div>
       </div>
       <div class="team-member">
-        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Jane Smith headshot">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png" alt="Default user avatar">
         <div class="member-name">Jane Smith</div>
         <div class="member-title">Senior Appraiser</div>
       </div>
-      <div class="team-member">
-        <img src="https://randomuser.me/api/portraits/men/56.jpg" alt="Robert Lee headshot">
-        <div class="member-name">Robert Lee</div>
-        <div class="member-title">Lead Software Engineer</div>
-      </div>
-      <!-- Add more team-member blocks as needed -->
     </div>
   </div>
   <div id="panel-services" class="tab-section" role="tabpanel" aria-labelledby="tab-services" tabindex="0">
