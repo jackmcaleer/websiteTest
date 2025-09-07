@@ -148,14 +148,11 @@
       color: #5c5c5c;
       margin: 1em 0 0 0;
     }
-
-    /* --- Service cards: horizontal default, stack on mobile --- */
+    /* --- Wide stacked cards --- */
     .service-cards {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       gap: 2rem;
-      justify-content: center;
-      align-items: stretch;
       margin-top: 1rem;
       margin-bottom: 1rem;
     }
@@ -165,12 +162,12 @@
       border: 2px solid var(--umich-maize);
       box-shadow: 0 2px 8px rgba(34,67,86,0.07);
       padding: 1.3rem 1.2rem 1rem;
-      min-width: 300px;
-      max-width: 420px;
       width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      box-sizing: border-box;
       display: flex;
       flex-direction: column;
-      margin: 0;
     }
     .service-card h3 {
       margin-top: 0;
@@ -189,13 +186,11 @@
       font-size: 1.07em;
     }
     @media (max-width: 900px) {
-      .service-cards {
-        flex-direction: column;
-        gap: 1.2rem;
+      .tab-section, .hero {
         max-width: 100%;
+        padding: 1rem;
       }
       .service-card {
-        min-width: 0;
         max-width: 100%;
       }
     }
@@ -218,16 +213,12 @@
       .hero h1 {
         font-size: 1.6rem;
       }
-      .hero, .tab-section {
-        padding: 1rem;
-      }
     }
   </style>
 </head>
 <body>
   <header>
     <div class="site-header-content">
-      <!-- SVG Placeholder Logo: a stylized "2"/building using maize/blue U-M colors -->
       <span class="logo" aria-label="2nd Street Appraisal logo">
         <svg width="48" height="48" viewBox="0 0 48 48" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
           <rect width="48" height="48" rx="10" fill="#00274C"/>
@@ -257,9 +248,7 @@
   <div id="panel-about" class="tab-section" role="tabpanel" aria-labelledby="tab-about" tabindex="0">
     <h2>About Us</h2>
     <p>
-      2nd Street Appraisal is a trusted provider of real estate valuation services. 
-      With years of experience, we deliver accurate, timely, and professional appraisals for residential and commercial properties. 
-      Our team is committed to integrity, transparency, and excellence in every assignment.
+      fill in
     </p>
   </div>
   <div id="panel-services" class="tab-section" role="tabpanel" aria-labelledby="tab-services" tabindex="0">
@@ -308,7 +297,7 @@
         <p>
           Our experience in dealing with fixed assets across a wide spectrum of industries has equipped us with a profound understanding of the unique challenges and opportunities present in various sectors.
           This depth of insight allows us to not only understand the intricacies of your specific challenges but also to offer innovative solutions that consistently deliver tangible results.
-          You can rely on our expertise to meet your challenges with a history of proven excellence.
+          At Irontrax, you can rely on our expertise to meet your challenges with a history of proven excellence.
         </p>
         <div class="subtitle">What we do</div>
         <ul>
@@ -380,11 +369,8 @@
         document.getElementById(tab).tabIndex = section === tab.replace('tab-','') ? 0 : -1;
         document.getElementById(panel).classList.toggle("active", section === tab.replace('tab-',''));
       });
-
-      // Move focus to the active panel for accessibility
       document.getElementById("panel-" + section).focus();
     }
-    // Allow keyboard arrow navigation on the tablist
     document.querySelector('nav[role="tablist"]').addEventListener('keydown', function(e){
       const tabOrder = tabs.map(t => t.tab);
       let idx = tabOrder.indexOf(document.activeElement.id);
