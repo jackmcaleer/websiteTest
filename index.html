@@ -19,60 +19,90 @@
       background: #f8f9fa;
       color: #222;
       line-height: 1.6;
-      scroll-behavior: smooth;
     }
     header {
       background: var(--header-bg);
       color: var(--text-on-dark);
-      padding: 0.5rem 0;
       position: sticky;
       top: 0;
       z-index: 100;
       box-shadow: 0 2px 4px rgba(0,0,0,.06);
     }
+    .site-header-content {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0.5rem 1rem;
+    }
+    .logo {
+      flex: 0 0 auto;
+      width: 48px;
+      height: 48px;
+      margin-right: 18px;
+      display: inline-block;
+    }
+    .site-title {
+      font-size: 1.7rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      color: var(--header-accent);
+      flex: 1 1 auto;
+    }
     nav {
       text-align: center;
-      padding: 0.5rem 0;
+      padding: 0.7rem 0 0.3rem 0;
     }
-    nav a {
+    nav button {
+      background: none;
       color: var(--text-on-dark);
-      text-decoration: none;
+      border: none;
       margin: 0 1.2rem;
       font-weight: 700;
       font-size: 1rem;
       padding: 0.2em 0.4em;
       border-radius: 3px;
-      transition: background 0.2s;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
     }
-    nav a:focus, nav a:hover {
+    nav button:focus, nav button:hover {
       background: var(--header-accent);
       color: var(--header-bg);
       outline: 2px solid var(--header-accent);
       outline-offset: 2px;
     }
-    .skip-link {
-      position: absolute;
-      left: -999px;
-      top: auto;
-      width: 1px;
-      height: 1px;
-      overflow: hidden;
-      z-index: 200;
-    }
-    .skip-link:focus {
-      left: 10px;
-      width: auto;
-      height: auto;
+    nav button[aria-selected="true"] {
+      text-decoration: underline;
       background: var(--header-accent);
       color: var(--header-bg);
-      padding: 8px 16px;
-      border-radius: 4px;
+    }
+    .tab-section {
+      display: none;
+      max-width: 800px;
+      margin: 2rem auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(34,67,86,0.07);
+      animation: fadein 0.3s;
+    }
+    @keyframes fadein {
+      from { opacity: 0; transform: translateY(20px);}
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .tab-section.active {
+      display: block;
     }
     .hero {
       background: #f6f6f8;
       text-align: center;
       padding: 3rem 1rem 2rem;
       border-bottom: 4px solid var(--header-accent);
+      max-width: 800px;
+      margin: 2rem auto 0;
+      border-radius: 8px 8px 0 0;
+      box-shadow: 0 2px 8px rgba(34,67,86,0.05);
     }
     .hero h1 {
       font-size: 2.5rem;
@@ -91,17 +121,6 @@
       margin: 2rem auto 0;
       color: #333;
       font-size: 1.1rem;
-    }
-    main {
-      max-width: 800px;
-      margin: 2rem auto;
-      background: white;
-      padding: 2rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(34,67,86,0.07);
-    }
-    section {
-      margin-bottom: 2.5rem;
     }
     h2 {
       color: var(--header-bg);
@@ -130,78 +149,139 @@
       margin: 1em 0 0 0;
     }
     @media (max-width: 700px) {
-      main {
-        padding: 1rem;
+      .site-header-content {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .logo {
+        margin-bottom: 6px;
+      }
+      .site-title {
+        font-size: 1.2rem;
+        margin-bottom: 3px;
+      }
+      nav button {
+        margin: 0 0.3rem;
+        font-size: 0.98rem;
       }
       .hero h1 {
         font-size: 1.6rem;
       }
-      nav a {
-        margin: 0 0.3rem;
-        font-size: 0.98rem;
+      .hero, .tab-section {
+        padding: 1rem;
       }
     }
   </style>
 </head>
 <body>
-  <a href="#main" class="skip-link">Skip to main content</a>
   <header>
-    <nav aria-label="Main navigation">
-      <a href="#home">Home</a>
-      <a href="#about">About Us</a>
-      <a href="#services">Services</a>
-      <a href="#media">Media</a>
-      <a href="#contact">Contact</a>
+    <div class="site-header-content">
+      <!-- SVG Placeholder Logo: a stylized "2"/building in maize/blue -->
+      <span class="logo" aria-label="2nd Street Appraisal logo">
+        <svg width="48" height="48" viewBox="0 0 48 48" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+          <rect width="48" height="48" rx="10" fill="#00274C"/>
+          <text x="24" y="33" text-anchor="middle" font-family="Arial, sans-serif"
+                font-size="28" fill="#FFCB05" font-weight="bold">2</text>
+          <rect x="19" y="16" width="10" height="15" fill="#FFCB05"/>
+          <rect x="23" y="18" width="2" height="11" fill="#00274C"/>
+        </svg>
+      </span>
+      <span class="site-title">2nd Street Appraisal</span>
+    </div>
+    <nav aria-label="Main navigation" role="tablist">
+      <button role="tab" id="tab-home" aria-selected="true" aria-controls="panel-home" tabindex="0" onclick="showSection('home')">Home</button>
+      <button role="tab" id="tab-about" aria-selected="false" aria-controls="panel-about" tabindex="-1" onclick="showSection('about')">About Us</button>
+      <button role="tab" id="tab-services" aria-selected="false" aria-controls="panel-services" tabindex="-1" onclick="showSection('services')">Services</button>
+      <button role="tab" id="tab-media" aria-selected="false" aria-controls="panel-media" tabindex="-1" onclick="showSection('media')">Media</button>
+      <button role="tab" id="tab-contact" aria-selected="false" aria-controls="panel-contact" tabindex="-1" onclick="showSection('contact')">Contact</button>
     </nav>
   </header>
-  <div id="home" class="hero" tabindex="-1">
+  <div id="panel-home" class="hero tab-section active" role="tabpanel" aria-labelledby="tab-home" tabindex="0">
     <h1>APPRAISALS, SALES, &amp; ADVISORY</h1>
     <h2>Manage your assets effectively</h2>
     <p>
       Irontrax specializes in accurate commercial &amp; industrial appraisals, sales, and advisory services backed by industry expertise, ensuring dependable results.
     </p>
   </div>
-  <main id="main">
-    <section id="about">
-      <h2>About Us</h2>
-      <p>
-        2nd Street Appraisal is a trusted provider of real estate valuation services. 
-        With years of experience, we deliver accurate, timely, and professional appraisals for residential and commercial properties. 
-        Our team is committed to integrity, transparency, and excellence in every assignment.
-      </p>
-    </section>
-    <section id="services">
-      <h2>Services</h2>
-      <ul>
-        <li>Residential Property Appraisals</li>
-        <li>Commercial Real Estate Appraisals</li>
-        <li>Estate &amp; Trust Appraisals</li>
-        <li>Tax Appeal Appraisals</li>
-        <li>Pre-listing &amp; Pre-purchase Valuations</li>
-        <li>Advisory &amp; Consultation</li>
-      </ul>
-    </section>
-    <section id="media">
-      <h2>Media</h2>
-      <p>
-        Showcase recent work, testimonials, or press mentions here. Add photos, video links, or documents as needed.
-      </p>
-      <!-- Example placeholder for an image -->
-      <!--
-      <img src="your-image-link.jpg" alt="Office photo" style="max-width:100%;border-radius:4px;">
-      -->
-    </section>
-    <section id="contact">
-      <h2>Contact</h2>
-      <div class="contact-info">
-        <p>Email: <a href="mailto:info@2ndstreetappraisal.com">info@2ndstreetappraisal.com</a></p>
-        <p>Phone: (555) 123-4567</p>
-        <p>Address: 123 2nd Street, Your City, State ZIP</p>
-      </div>
-      <div class="privacy-note">
-        <strong>Privacy Notice:</strong> Your contact information is confidential and will only be used to respond to your inquiries. We do not share your information with third parties.
-      </div>
-    </section>
-  </main>
+  <div id="panel-about" class="tab-section" role="tabpanel" aria-labelledby="tab-about" tabindex="0">
+    <h2>About Us</h2>
+    <p>
+      2nd Street Appraisal is a trusted provider of real estate valuation services. 
+      With years of experience, we deliver accurate, timely, and professional appraisals for residential and commercial properties. 
+      Our team is committed to integrity, transparency, and excellence in every assignment.
+    </p>
+  </div>
+  <div id="panel-services" class="tab-section" role="tabpanel" aria-labelledby="tab-services" tabindex="0">
+    <h2>Services</h2>
+    <ul>
+      <li>Residential Property Appraisals</li>
+      <li>Commercial Real Estate Appraisals</li>
+      <li>Estate &amp; Trust Appraisals</li>
+      <li>Tax Appeal Appraisals</li>
+      <li>Pre-listing &amp; Pre-purchase Valuations</li>
+      <li>Advisory &amp; Consultation</li>
+    </ul>
+  </div>
+  <div id="panel-media" class="tab-section" role="tabpanel" aria-labelledby="tab-media" tabindex="0">
+    <h2>Media</h2>
+    <p>
+      Showcase recent work, testimonials, or press mentions here. Add photos, video links, or documents as needed.
+    </p>
+    <!-- Example placeholder for an image -->
+    <!--
+    <img src="your-image-link.jpg" alt="Office photo" style="max-width:100%;border-radius:4px;">
+    -->
+  </div>
+  <div id="panel-contact" class="tab-section" role="tabpanel" aria-labelledby="tab-contact" tabindex="0">
+    <h2>Contact</h2>
+    <div class="contact-info">
+      <p>Email: <a href="mailto:info@2ndstreetappraisal.com">info@2ndstreetappraisal.com</a></p>
+      <p>Phone: (555) 123-4567</p>
+      <p>Address: 123 2nd Street, Your City, State ZIP</p>
+    </div>
+    <div class="privacy-note">
+      <strong>Privacy Notice:</strong> Your contact information is confidential and will only be used to respond to your inquiries. We do not share your information with third parties.
+    </div>
+  </div>
+  <script>
+    const tabs = [
+      { tab: "tab-home", panel: "panel-home" },
+      { tab: "tab-about", panel: "panel-about" },
+      { tab: "tab-services", panel: "panel-services" },
+      { tab: "tab-media", panel: "panel-media" },
+      { tab: "tab-contact", panel: "panel-contact" }
+    ];
+
+    function showSection(section) {
+      tabs.forEach(({tab, panel}) => {
+        document.getElementById(tab).setAttribute("aria-selected", section === tab.replace('tab-','') ? "true" : "false");
+        document.getElementById(tab).tabIndex = section === tab.replace('tab-','') ? 0 : -1;
+        document.getElementById(panel).classList.toggle("active", section === tab.replace('tab-',''));
+      });
+
+      // Move focus to the active panel for accessibility
+      document.getElementById("panel-" + section).focus();
+    }
+    // Allow keyboard arrow navigation on the tablist
+    document.querySelector('nav[role="tablist"]').addEventListener('keydown', function(e){
+      const tabOrder = tabs.map(t => t.tab);
+      let idx = tabOrder.indexOf(document.activeElement.id);
+      if (e.key === "ArrowRight") {
+        idx = (idx + 1) % tabs.length;
+        document.getElementById(tabOrder[idx]).focus();
+        e.preventDefault();
+      } else if (e.key === "ArrowLeft") {
+        idx = (idx - 1 + tabs.length) % tabs.length;
+        document.getElementById(tabOrder[idx]).focus();
+        e.preventDefault();
+      } else if (e.key === "Home") {
+        document.getElementById(tabOrder[0]).focus();
+        e.preventDefault();
+      } else if (e.key === "End") {
+        document.getElementById(tabOrder[tabs.length-1]).focus();
+        e.preventDefault();
+      }
+    });
+  </script>
 </body>
 </html>
