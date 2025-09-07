@@ -94,54 +94,55 @@
     .tab-section.active {
       display: block;
     }
-    .hero {
+    /* Home hero section cleanup */
+    .homepage-hero {
       background: #f6f6f8;
+      border-radius: 9px;
+      padding: 2.5rem 1.2rem 2rem 1.2rem;
+      box-shadow: 0 2px 8px rgba(34,67,86,0.08);
+      max-width: 700px;
+      margin: 1.5em auto 0 auto;
       text-align: center;
-      padding: 3rem 1rem 2rem;
-      border-bottom: 4px solid var(--header-accent);
-      max-width: 900px;
-      margin: 2rem auto 0;
-      border-radius: 8px 8px 0 0;
-      box-shadow: 0 2px 8px rgba(34,67,86,0.05);
     }
-    .hero h1 {
-      font-size: 2.5rem;
-      color: var(--header-bg);
-      margin-bottom: 0.5rem;
+    .homepage-hero h1 {
+      font-size: 2.3rem;
+      font-weight: 700;
+      color: #00274C;
       letter-spacing: 0.04em;
-    }
-    .hero h2 {
+      margin-bottom: 0.5rem;
       margin-top: 0;
-      font-weight: normal;
-      font-size: 1.3rem;
+    }
+    .hero-tagline {
+      font-size: 1.33rem;
       color: #234356;
+      font-weight: 500;
+      margin-bottom: 0.7rem;
     }
-    .hero p {
-      max-width: 540px;
-      margin: 2rem auto 0;
-      color: #333;
-      font-size: 1.1rem;
+    .hero-lead {
+      font-size: 1.08rem;
+      color: #222;
+      margin-top: 1.35rem;
+      margin-bottom: 0;
     }
-    /* Why Use Us stylings */
     .whyus-section {
       background: #f2f3f5;
       border-radius: 10px 10px 0 0;
       box-shadow: 0 2px 8px rgba(34,67,86,.09);
       max-width: 600px;
-      margin: 2.5em auto 0;
+      margin: 2.2em auto 0;
       padding: 2em 1.2em 2.2em 1.2em;
       text-align: left;
       position: relative;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      border-bottom: none;
     }
     .whyus-section h2 {
       color: #00274C;
       margin-top: 0;
-      font-size: 1.2em;
+      font-size: 1.22em;
       letter-spacing: 0.01em;
+      margin-bottom: 0.7em;
     }
     .whyus-bar {
       width: 100%;
@@ -164,7 +165,6 @@
       color: #FFCB05;
       outline: none;
     }
-
     h2 {
       color: var(--header-bg);
       font-size: 1.7rem;
@@ -265,9 +265,12 @@
         margin: 0 0.3rem;
         font-size: 0.98rem;
       }
-      .hero h1 {
-        font-size: 1.6rem;
+      .homepage-hero {
+        padding: 1.3rem 0.6rem 1rem 0.6rem;
+        max-width: 97vw;
       }
+      .hero-tagline { font-size: 1rem; }
+      .hero-lead { font-size: 1em; }
       .card-details {
         flex-direction: column;
         gap: 1.3rem;
@@ -305,12 +308,14 @@
       <button role="tab" id="tab-contact" aria-selected="false" aria-controls="panel-contact" tabindex="-1" onclick="showSection('contact')">Contact</button>
     </nav>
   </header>
-  <div id="panel-home" class="hero tab-section active" role="tabpanel" aria-labelledby="tab-home" tabindex="0">
-    <h1>APPRAISALS, SALES, &amp; ADVISORY</h1>
-    <h2>Manage your assets effectively</h2>
-    <p>
-      Irontrax specializes in accurate commercial &amp; industrial appraisals, sales, and advisory services backed by industry expertise, ensuring dependable results.
-    </p>
+  <div id="panel-home" class="tab-section active" role="tabpanel" aria-labelledby="tab-home" tabindex="0">
+    <section class="homepage-hero">
+      <h1>APPRAISALS, SALES, &amp; ADVISORY</h1>
+      <div class="hero-tagline">Manage your assets effectively</div>
+      <p class="hero-lead">
+        Irontrax specializes in accurate commercial &amp; industrial appraisals, sales, and advisory services backed by industry expertise, ensuring dependable results.
+      </p>
+    </section>
     <div class="whyus-section">
       <h2>Why Use Us</h2>
       <p>
@@ -318,8 +323,7 @@
         <br><br>
         appraisalToolbox seamlessly integrates market data and advanced analytics, ensuring each report is delivered quickly while maintaining the highest standards of reliability. We’re proud to offer <strong>live demos</strong> of appraisalToolbox—so you can experience its features, transparency, and ease of use before you commit.
         <br><br>
-        Choose us for leading-edge technology, transparent communication at every stage, and confidence in results that support your decision-making.
-        <br><br>
+        Choose us for leading-edge technology, transparent communication at every stage, and confidence in results that support your decision-making.<br><br>
         <a href="#contact">Contact us to schedule a live demo today!</a>
       </p>
       <span class="whyus-bar"></span>
@@ -486,5 +490,4 @@
     });
   </script>
 </body>
-</html
 </html>
