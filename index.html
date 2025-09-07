@@ -148,6 +148,53 @@
       color: #5c5c5c;
       margin: 1em 0 0 0;
     }
+    /* --- Service cards --- */
+    .service-cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      justify-content: space-between;
+    }
+    .service-card {
+      flex: 1 1 330px;
+      background: #f6f6f8;
+      border-radius: 9px;
+      border: 2px solid var(--umich-maize);
+      box-shadow: 0 2px 8px rgba(34,67,86,0.07);
+      padding: 1.3rem 1.2rem 1rem;
+      min-width: 300px;
+      max-width: 420px;
+      margin: 0 auto;
+    }
+    .service-card h3 {
+      margin-top: 0;
+      margin-bottom: 0.5em;
+      color: var(--umich-blue);
+      font-size: 1.35rem;
+    }
+    .service-card ul {
+      margin-bottom: 1em;
+    }
+    .service-card .subtitle {
+      font-weight: bold;
+      color: var(--umich-blue);
+      margin-bottom: 0.1em;
+      margin-top: 0.8em;
+      font-size: 1.07em;
+    }
+    @media (max-width: 900px) {
+      .service-cards {
+        flex-direction: column;
+        gap: 1.2rem;
+      }
+      .service-card {
+        min-width: 0;
+        width: 100%;
+        max-width: 100%;
+      }
+    }
     @media (max-width: 700px) {
       .site-header-content {
         flex-direction: column;
@@ -176,7 +223,7 @@
 <body>
   <header>
     <div class="site-header-content">
-      <!-- SVG Placeholder Logo: a stylized "2"/building in maize/blue -->
+      <!-- SVG Placeholder Logo: a stylized "2"/building using maize/blue U-M colors -->
       <span class="logo" aria-label="2nd Street Appraisal logo">
         <svg width="48" height="48" viewBox="0 0 48 48" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
           <rect width="48" height="48" rx="10" fill="#00274C"/>
@@ -213,14 +260,85 @@
   </div>
   <div id="panel-services" class="tab-section" role="tabpanel" aria-labelledby="tab-services" tabindex="0">
     <h2>Services</h2>
-    <ul>
-      <li>Residential Property Appraisals</li>
-      <li>Commercial Real Estate Appraisals</li>
-      <li>Estate &amp; Trust Appraisals</li>
-      <li>Tax Appeal Appraisals</li>
-      <li>Pre-listing &amp; Pre-purchase Valuations</li>
-      <li>Advisory &amp; Consultation</li>
-    </ul>
+    <div class="service-cards">
+      <section class="service-card">
+        <h3>Appraisals</h3>
+        <p>
+          At Irontrax, trust our seasoned professionals for reliable and unbiased appraisals with over 250 years of collective expertise. Our qualified experts deliver accurate assessments, emphasizing defensibility and adherence to industry standards.
+          To ensure credibility, every appraisal undergoes a meticulous review process by an Accredited Senior Appraiser affiliated with the American Society of Appraisers. With a commitment to thoroughness, we provide tailored and trustworthy valuation services that meet your specific needs.
+          Choose Irontrax for a dedicated team that combines extensive experience with the highest standards, offering confidence in the accuracy of your asset valuations.
+        </p>
+        <div class="subtitle">What we do</div>
+        <ul>
+          <li>Inventory Appraisals</li>
+          <li>Equipment Appraisals</li>
+          <li>Physical Inspection</li>
+          <li>Desktop Appraisals</li>
+          <li>Future Value Projections - Equipment</li>
+          <li>Depreciation Studies</li>
+          <li>Intangible Valuations</li>
+          <li>Real Estate Appraisals</li>
+          <li>Lease End Inspections</li>
+          <li>Physical Asset Inspections</li>
+          <li>…and more!</li>
+        </ul>
+        <div class="subtitle">When we do it</div>
+        <ul>
+          <li>Advisory</li>
+          <li>Bankruptcy</li>
+          <li>Business Planning</li>
+          <li>Employee Stock Option Planning (ESOP)</li>
+          <li>Financial Reporting/Audit Review</li>
+          <li>Financing</li>
+          <li>Insurance</li>
+          <li>Litigation Support</li>
+          <li>Liquidations</li>
+          <li>Mergers &amp; Acquisitions</li>
+          <li>Sale &amp; Leaseback</li>
+          <li>Tax Advisory</li>
+          <li>...and more!</li>
+        </ul>
+      </section>
+      <section class="service-card">
+        <h3>Advisory</h3>
+        <p>
+          With a combined 250+ years of experience, Irontrax professionals have earned the trust of our clients. Our extensive experience in dealing with fixed assets across a wide spectrum of industries has equipped us with a profound understanding of the unique challenges and opportunities present in various sectors.
+          This depth of insight allows us to not only understand the intricacies of your specific challenges but also to offer innovative solutions that consistently deliver tangible results.
+          At Irontrax, you can rely on our expertise to meet your challenges with a history of proven excellence.
+        </p>
+        <div class="subtitle">What we do</div>
+        <ul>
+          <li>Future Value Projections</li>
+          <li>Asset Disposition</li>
+          <li>Lease End Inspections</li>
+          <li>Equipment Inspections</li>
+          <li>Asset Remarketing</li>
+          <li>Case Studies</li>
+          <li>Matrices</li>
+          <li>Bankruptcy</li>
+          <li>M&amp;A</li>
+          <li>Portfolio Review</li>
+          <li>Physical Asset Inspections</li>
+          <li>Repossession of Assets</li>
+          <li>Depreciation Studies</li>
+          <li>White Papers</li>
+          <li>and more!</li>
+        </ul>
+        <div class="subtitle">When we do it</div>
+        <ul>
+          <li>Accounting</li>
+          <li>Bankruptcy</li>
+          <li>Business Planning</li>
+          <li>Employee Stock Option Planning (ESOP)</li>
+          <li>Financial Planning</li>
+          <li>Leasing</li>
+          <li>Litigation Support</li>
+          <li>Mergers &amp; Acquisitions</li>
+          <li>Tax Advisory</li>
+          <li>...and more!</li>
+        </ul>
+      </section>
+    </div>
   </div>
   <div id="panel-media" class="tab-section" role="tabpanel" aria-labelledby="tab-media" tabindex="0">
     <h2>Media</h2>
