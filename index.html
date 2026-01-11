@@ -14,159 +14,194 @@
       --umich-maize: #FFCB05;
       --header-bg: var(--umich-blue);
       --header-accent: var(--umich-maize);
-      --text-on-dark: #fff;
       --main-box-width: 650px;
+      --lux-shadow: 0 2px 24px rgba(0,39,76,.067);
     }
     body {
       font-family: 'Open Sans', Arial, sans-serif;
       margin: 0;
-      background: #f8f9fa;
-      color: #222;
-      line-height: 1.6;
+      background: #f7f8fa;
+      color: #212529;
+      line-height: 1.7;
+      letter-spacing: 0.01em;
     }
     header {
       background: var(--header-bg);
-      color: var(--text-on-dark);
+      color: #fff;
+      box-shadow: var(--lux-shadow);
       position: sticky;
       top: 0;
       z-index: 100;
-      box-shadow: 0 2px 4px rgba(0,0,0,.06);
     }
     .site-header-content {
       display: flex;
       align-items: center;
-      justify-content: flex-start;
       max-width: 900px;
       margin: 0 auto;
-      padding: 0.5rem 1rem;
+      padding: 1.1rem 1.5rem 1.1rem 1.5rem;
+      gap: 18px;
+      border-bottom: 2px solid var(--header-accent);
     }
     .logo {
-      flex: 0 0 auto;
       width: 48px;
       height: 48px;
-      margin-right: 18px;
+      margin-right: 6px;
       display: inline-block;
     }
     .logo img {
-      width: 48px;
-      height: 48px;
+      width: 100%;
+      height: 100%;
+      border-radius: 15px;
+      background: #fff;
+      border: 2px solid var(--header-accent);
+      box-shadow: 0 2px 12px rgba(0,39,76,.11);
       display: block;
-      vertical-align: middle;
     }
     .site-title {
       font-family: 'Computer Modern Sans', 'Open Sans', Arial, sans-serif;
-      font-size: 1.7rem;
+      font-size: 2.1rem;
       font-weight: 700;
-      letter-spacing: 0.03em;
       color: var(--header-accent);
+      letter-spacing: 0.05em;
+      text-shadow: 0 1px 12px rgba(255,203,5,.09);
+      border-bottom: 3px solid var(--header-accent);
+      padding-bottom: 0.13em;
       flex: 1 1 auto;
+      margin-bottom: 0;
     }
-    .homepage-hero,
-    .whyus-section {
-      max-width: var(--main-box-width);
-      margin: 2.5em auto 0 auto;
-      border-radius: 10px 10px 0 0;
-      box-shadow: 0 2px 8px rgba(34,67,86,0.08);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
+    main {
+      margin: 0;
+      padding: 0;
     }
     .homepage-hero {
-      background: #f6f6f8;
-      padding: 2.5rem 1.2rem 2rem 1.2rem;
+      max-width: var(--main-box-width);
+      margin: 4em auto 0 auto;
+      background: #fff;
+      border-radius: 18px 18px 0 0;
+      box-shadow: var(--lux-shadow);
       text-align: center;
-      border-radius: 10px 10px 0 0;
-      margin-bottom: 0.2em;
+      padding: 3rem 2rem 2.1rem 2rem;
+      border-bottom: 1px solid #ededed;
+      position: relative;
     }
     .homepage-hero h1 {
-      font-size: 2.3rem;
+      font-family: 'Computer Modern Sans', 'Open Sans', Arial, sans-serif;
+      font-size: 2.4rem;
       font-weight: 700;
-      color: #00274C;
-      letter-spacing: 0.04em;
-      margin-bottom: 0.5rem;
+      color: var(--umich-blue);
+      letter-spacing: 0.07em;
+      margin-bottom: 1.2rem;
       margin-top: 0;
+      text-shadow: 0 2px 24px rgba(0,39,76,.04);
     }
     .hero-tagline {
-      font-size: 1.33rem;
-      color: #234356;
-      font-weight: 500;
-      margin-bottom: 0.7rem;
+      display: inline-block;
+      font-size: 1.15rem;
+      color: var(--header-accent);
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      margin-bottom: 1.1rem;
+      padding: 0.5em 1em;
+      border-radius: 30px;
+      background: rgba(255,203,5,0.13);
+      box-shadow: none;
     }
     .hero-lead {
       font-size: 1.08rem;
-      color: #222;
-      margin-top: 1.35rem;
-      margin-bottom: 0;
+      color: #212529;
+      margin-top: 1.5rem;
+      margin-bottom: 0.2rem;
+      font-weight: 400;
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
+      letter-spacing: 0.02em;
     }
     .whyus-section {
-      background: #f2f3f5;
-      border-radius: 0 0 10px 10px;
-      box-shadow: 0 2px 8px rgba(34,67,86,.09);
-      padding: 2em 1.2em 2.2em 1.2em;
+      max-width: var(--main-box-width);
+      margin: 0 auto;
+      background: #f9f9fc;
+      border-radius: 0 0 18px 18px;
+      box-shadow: var(--lux-shadow);
+      padding: 2.1em 2em 2.6em 2em;
       text-align: left;
       position: relative;
-      justify-content: space-between;
-      min-height: 170px;
+      border-top: 1px solid #e8e9f0;
     }
     .whyus-section h2 {
-      color: #00274C;
+      font-family: 'Computer Modern Sans', 'Open Sans', Arial, sans-serif;
+      color: var(--header-accent);
+      font-size: 1.29em;
+      font-weight: 700;
+      margin-bottom: 1.2em;
       margin-top: 0;
-      font-size: 1.22em;
+      letter-spacing: 0.03em;
+    }
+    .whyus-section p {
+      font-size: 1.08rem;
+      color: #192439;
+      margin-bottom: 2.1em;
+      line-height: 1.82;
       letter-spacing: 0.01em;
-      margin-bottom: 0.7em;
-      text-align: left;
-      align-self: flex-start;
     }
     .whyus-bar {
       width: 100%;
-      height: 16px;
-      background: #FFCB05;
-      border-radius: 0 0 10px 10px;
-      margin: 0;
-      display: block;
+      height: 17px;
+      background: linear-gradient(90deg, var(--header-accent) 0%, var(--umich-blue) 100%);
+      border-radius: 0 0 18px 18px;
       position: absolute;
       left: 0;
       bottom: 0;
+      opacity: 0.66;
     }
-    .whyus-section a {
-      color: #00274C;
-      font-weight: bold;
-      text-decoration: underline;
-      transition: color .2s;
+    .exclusive-contact-link {
+      display: inline-block;
+      font-family: 'Computer Modern Sans', 'Open Sans', Arial, sans-serif;
+      font-size: 1.04rem;
+      color: var(--header-bg);
+      background: linear-gradient(90deg, var(--header-accent) 77%, #fff8db 100%);
+      font-weight: 600;
+      border-radius: 36px;
+      padding: 0.74em 2em;
+      margin-top: 1.4em;
+      text-decoration: none;
+      box-shadow: 0 1px 6px rgba(255,203,5,.045);
+      border: none;
+      transition: background 0.2s, color 0.2s, box-shadow .2s;
+      letter-spacing: 0.03em;
     }
-    .whyus-section a:hover,
-    .whyus-section a:focus {
-      color: #FFCB05;
+    .exclusive-contact-link:hover,
+    .exclusive-contact-link:focus {
+      background: linear-gradient(90deg, #fff8db 0%, var(--header-accent) 100%);
+      color: var(--header-bg);
+      box-shadow: 0 2px 22px rgba(255,203,5,.13);
       outline: none;
-    }
-    .whyus-section p {
-      margin-bottom: 2.1em;
-    }
-    @media (max-width: 900px) {
-      .homepage-hero, .whyus-section {
-        max-width: 100%;
-        padding: 1rem;
-      }
     }
     @media (max-width: 700px) {
       .site-header-content {
         flex-direction: column;
-        align-items: flex-start;
-      }
-      .logo {
-        margin-bottom: 6px;
-      }
-      .site-title {
-        font-size: 1.2rem;
-        margin-bottom: 3px;
+        gap: 6px;
+        padding: 1rem 0.7rem;
       }
       .homepage-hero, .whyus-section {
-        padding: 1.3rem 0.6rem 1rem 0.6rem;
-        max-width: 98vw;
+        padding: 1.3em 0.7em 1em 0.7em;
+        max-width: 99vw;
+        border-radius: 12px 12px 0 0;
       }
-      .hero-tagline { font-size: 1rem; }
-      .hero-lead { font-size: 1em; }
+      .whyus-section {
+        border-radius: 0 0 12px 12px;
+        padding-top: 1.3em;
+      }
+      .site-title {
+        font-size: 1.15rem;
+        padding-bottom: 0.07em;
+        border-bottom: 2px solid var(--header-accent);
+      }
+      .homepage-hero h1 {
+        font-size: 1.45rem;
+      }
+      .hero-tagline { font-size: 1rem; padding: 0.4em 0.7em; }
+      .hero-lead { font-size: 0.97em; }
       .whyus-bar { height: 12px; }
     }
   </style>
@@ -175,29 +210,34 @@
   <header>
     <div class="site-header-content">
       <span class="logo" aria-label="2nd Street Appraisal logo">
-        <img src="img/Logo.png" alt="2nd Street Appraisal Company logo" width="48" height="48" style="vertical-align:middle;">
+        <img src="img/Logo.png" alt="2nd Street Appraisal Company logo" width="48" height="48">
       </span>
       <span class="site-title">Second Street Appraisal Company</span>
     </div>
   </header>
   <main>
     <section class="homepage-hero">
-      <h1>APPRAISALS, SALES, &amp; ADVISORY</h1>
-      <div class="hero-tagline">Manage your assets effectively</div>
+      <h1>
+        Exclusive Asset Appraisals for Visionaries
+      </h1>
+      <div class="hero-tagline">
+        Where select clients shape their financial legacy
+      </div>
       <p class="hero-lead">
-        We specialize in accurate commercial &amp; industrial appraisals, sales, and advisory services backed by industry expertise, ensuring dependable results.
+        Second Street Appraisal Company is trusted by business leaders and discerning asset holders who require precise, confidential, and insightful valuations.<br>
+        Access to our services is limited—reserved for those who value expertise, discretion, and individualized advisory delivered with confidence and detail.
       </p>
     </section>
     <div class="whyus-section">
-      <h2>Why Use Us</h2>
+      <h2>Membership By Invitation Only</h2>
       <p>
-        At 2nd Street Appraisal, we go beyond traditional valuation services with our custom-built software, <strong>appraisalToolbox</strong>. This innovative platform powers more efficient and accurate asset projections, giving our team and clients the ability to track appraisal progress, manage documentation, and collaborate with ease.
-        <br><br>
-        appraisalToolbox seamlessly integrates market data and advanced analytics, ensuring each report is delivered quickly while maintaining the highest standards of reliability. We’re proud to offer <strong>live demos</strong> of appraisalToolbox—so you can experience its features, transparency, and ease of use before you commit.
-        <br><br>
-        Choose us for leading-edge technology, transparent communication at every stage, and confidence in results that support your decision-making.<br><br>
-        <a href="#contact">Contact us to schedule a live demo today!</a>
+        Our team is committed to serving select clients through a process that blends industry-standard accuracy with the distinct advantages of our proprietary <strong>appraisalToolbox</strong>. <br><br>
+        This platform delivers advanced analytics and document management in a private environment—your information is protected at every stage of the engagement.<br><br>
+        We uphold strict confidentiality, transparent communication, and provide exclusive live demonstrations by request. Inquire to discover whether your organization is eligible for our premium asset advisory.
       </p>
+      <a class="exclusive-contact-link" href="mailto:info@2ndstreetappraisal.com?subject=Exclusive Consultation Request">
+        Request Invitation
+      </a>
       <span class="whyus-bar"></span>
     </div>
   </main>
