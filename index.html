@@ -6,7 +6,7 @@
   <title>Second Street Appraisal Company</title>
   <!-- Open Sans for body text -->
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-  <!-- Computer Modern Sans for headings -->
+  <!-- Computer Modern Sans for header -->
   <link href="https://fonts.cdnfonts.com/css/computer-modern" rel="stylesheet">
   <style>
     :root {
@@ -14,20 +14,14 @@
       --umich-maize: #FFCB05;
       --header-bg: var(--umich-blue);
       --header-accent: var(--umich-maize);
-      --main-box-width: 900px;
-      --panel-radius: 20px;
-      --panel-padding: 2.1em 2em;
-      --content-max: 680px;
-      --light-bg: #f8f9fa;
-      --deep-shadow: 0 6px 32px rgba(0,39,76,0.14);
+      --main-max-width: 700px;
     }
     body {
       font-family: 'Open Sans', Arial, sans-serif;
+      background: #f8f9fa;
+      color: #222;
       margin: 0;
-      background: var(--light-bg);
-      color: #212a37;
     }
-    /* ----------- HEADER from your original ----------- */
     header {
       background: var(--header-bg);
       color: #fff;
@@ -39,7 +33,6 @@
     .site-header-content {
       display: flex;
       align-items: center;
-      justify-content: flex-start;
       max-width: 900px;
       margin: 0 auto;
       padding: 0.5rem 1rem;
@@ -49,288 +42,198 @@
       width: 48px;
       height: 48px;
       margin-right: 18px;
-      display: inline-block;
     }
     .logo img {
       width: 48px;
       height: 48px;
-      display: block;
       vertical-align: middle;
+      border-radius: 13px;
+      border: 2px solid var(--header-accent);
+      background: #fff;
+      box-shadow: 0 4px 16px rgba(0,39,76,0.10);
     }
     .site-title {
       font-family: 'Computer Modern Sans', 'Open Sans', Arial, sans-serif;
-      font-size: 1.7rem;
+      font-size: 1.9rem;
       font-weight: 700;
-      letter-spacing: 0.03em;
-      color: var(--header-accent);
-      flex: 1 1 auto;
-    }
-    /* ------------ MAIN REDESIGN FROM HERE ----------- */
-    main {
-      background: var(--light-bg);
-      padding: 0;
-    }
-    /* HERO */
-    .hero-panel {
-      max-width: var(--main-box-width);
-      margin: 2.5em auto 0 auto;
-      background: #fff;
-      border-radius: var(--panel-radius) var(--panel-radius) var(--panel-radius) var(--panel-radius);
-      box-shadow: var(--deep-shadow);
-      padding: 3.7em 1.3em 3.3em 1.3em;
-      text-align: center;
-      position: relative;
-    }
-    .hero-headline {
-      font-family: 'Computer Modern Sans', 'Open Sans', Arial, sans-serif;
-      font-size: 2.35rem;
-      color: var(--umich-blue);
-      font-weight: 700;
-      margin-bottom: 0.65em;
       letter-spacing: 0.04em;
-    }
-    .hero-sub {
-      font-family: 'Computer Modern Sans', 'Open Sans', Arial, sans-serif;
       color: var(--header-accent);
+    }
+
+    /* --- EXCLUSIVE HERO --- */
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 82vh;
+      background: linear-gradient(120deg,#fff 64%,#fffcf3 100%);
+    }
+    .homepage-hero {
+      background: linear-gradient(105deg, #f3f5fa 80%, #fffcf3 100%);
+      border-radius: 24px;
+      box-shadow: 0 7px 36px rgba(0,39,76,0.09), 0 2px 10px rgba(255,203,5,0.07);
+      max-width: var(--main-max-width);
+      width: 100%;
+      margin-top: 4em;
+      padding: 3em 2em 2.4em 2em;
+      position: relative;
+      text-align: center;
+    }
+    .homepage-hero h1 {
+      font-family: 'Computer Modern Sans', 'Open Sans', Arial, sans-serif;
+      font-size: 2.6rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      color: var(--header-bg);
+      margin-bottom: 0.5em;
+      text-shadow: 0 1px 28px rgba(0,39,76,.09);
+      position: relative;
+      display: inline-block;
+    }
+    .hero-underline {
+      display: block;
+      margin: 0.2em auto 1.3em auto;
+      width: 80px;
+      height: 7px;
+      border-radius: 5px;
+      background: linear-gradient(90deg,var(--umich-maize) 5%,#fff3bc 100%);
+      animation: showUnder 1.5s;
+    }
+    @keyframes showUnder {
+      from {width:0; opacity:0;}
+      to {width:80px; opacity:1;}
+    }
+    .hero-tagline {
+      font-family: 'Computer Modern Sans', 'Open Sans', Arial, sans-serif;
+      color: var(--umich-maize);
       font-size: 1.25rem;
       font-weight: 600;
-      letter-spacing: 0.025em;
-      margin-bottom: 1.25em;
-      background: rgba(255,203,5,0.11);
-      border-radius: 36px;
-      display: inline-block;
-      padding: 0.5em 1.2em;
-      box-shadow: 0 2px 18px rgba(255,203,5,0.09);
+      margin-bottom: 1.2em;
+      letter-spacing: 0.04em;
     }
     .hero-lead {
-      font-size: 1.13rem;
-      color: #222a37;
-      max-width: 530px;
-      margin: 1.1em auto 2.8em auto;
-      line-height: 1.75;
-      letter-spacing: 0.016em;
-    }
-    .cta-button {
-      background: var(--header-accent);
-      color: var(--umich-blue);
-      font-family: 'Computer Modern Sans', 'Open Sans', Arial, sans-serif;
-      font-weight: bold;
-      font-size: 1.13rem;
-      letter-spacing: 0.025em;
-      padding: 0.98em 2.3em;
-      border: none;
-      border-radius: 32px;
-      text-decoration: none;
-      box-shadow: 0 2px 14px rgba(255,203,5,0.10);
-      cursor: pointer;
-      transition: background 0.2s, color 0.2s, box-shadow 0.2s;
-      margin-top: 1em;
-      display: inline-block;
-    }
-    .cta-button:hover, .cta-button:focus {
-      background: var(--umich-blue);
-      color: var(--header-accent);
-      box-shadow: 0 2px 32px rgba(0,39,76,0.19);
-      outline: none;
-    }
-    /* WHY CHOOSE US */
-    .benefit-panel {
-      max-width: var(--main-box-width);
-      margin: 2em auto 0 auto;
-      background: #fff;
-      border-radius: var(--panel-radius);
-      box-shadow: var(--deep-shadow);
-      padding: var(--panel-padding);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .benefit-title {
-      font-family: 'Computer Modern Sans', 'Open Sans', Arial, sans-serif;
-      font-size: 1.46em;
-      color: var(--header-bg);
-      letter-spacing: 0.03em;
-      margin-bottom: 2em;
-      font-weight: 700;
-      text-align: center;
-    }
-    .benefits-row {
-      display: flex;
-      gap: 2.4em;
-      justify-content: center;
-      flex-wrap: wrap;
-      width: 100%;
-      margin-bottom: 1em;
-    }
-    .benefit-col {
-      background: rgba(246,246,248,0.63);
-      border-radius: 14px;
-      padding: 1.3em 1.2em;
-      box-shadow: 0 2px 12px rgba(0,39,76,.04);
-      flex: 1 1 220px;
-      min-width: 180px;
-      max-width: 260px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      border-top: 5px solid var(--header-accent);
-    }
-    .benefit-col svg {
-      display: block;
-      margin-bottom: 0.7em;
-    }
-    .benefit-col-title {
-      font-family: 'Computer Modern Sans', 'Open Sans', Arial, sans-serif;
-      font-size: 1.1em;
-      font-weight: bold;
-      letter-spacing: 0.03em;
-      color: var(--header-bg);
-      margin-bottom: 0.45em;
-    }
-    .benefit-col-desc {
-      font-size: 1em;
+      font-size: 1.07rem;
       color: #234356;
-      line-height: 1.72;
-      letter-spacing: 0.012em;
+      margin-top: 0.7em;
+      margin-bottom: 2.2em;
+      line-height: 1.77;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+      letter-spacing: 0.01em;
     }
-    /* TOOLBOX FEATURE */
-    .toolbox-feature-panel {
-      max-width: var(--main-box-width);
-      margin: 2em auto 0 auto;
-      background: linear-gradient(120deg, #FFCB0555 10%, #fff 90%);
-      border-radius: var(--panel-radius);
-      box-shadow: var(--deep-shadow);
-      padding: var(--panel-padding);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: left;
-      position: relative;
-      overflow: hidden;
-    }
-    .toolbox-feature-panel::before {
-      content: "";
-      position: absolute;
-      right: -60px; bottom: -80px;
-      width: 260px; height: 260px;
-      background: radial-gradient(circle, #00274CCCC 0%, #FFCB0533 80%, transparent 100%);
-      z-index: 0;
-      border-radius: 50%;
-    }
-    .toolbox-title {
-      font-family: 'Computer Modern Sans', 'Open Sans', Arial, sans-serif;
-      font-size: 1.22em;
-      font-weight: 700;
-      color: var(--umich-blue);
-      letter-spacing: 0.02em;
-      margin-bottom: 0.9em;
-      position: relative;
-      z-index: 2;
-      text-align: center;
-    }
-    .toolbox-desc {
-      font-size: 1.08em;
-      color: #1a2543;
-      line-height: 1.82;
-      letter-spacing: 0.012em;
-      position: relative;
-      z-index: 2;
-      max-width: var(--content-max);
-      text-align: center;
-    }
-    /* CONTACT PANEL */
-    .contact-panel {
-      max-width: var(--main-box-width);
-      margin: 2.2em auto 2em auto;
-      background: var(--header-bg);
-      border-radius: var(--panel-radius);
-      box-shadow: 0 2px 20px rgba(0,39,76,.12);
-      padding: 2em 2em 2.3em 2em;
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-    .contact-title {
-      font-family: 'Computer Modern Sans', 'Open Sans', Arial, sans-serif;
-      color: var(--header-accent);
-      font-size: 1.29em;
-      font-weight: 700;
-      margin-bottom: 1.2em;
-      letter-spacing: 0.02em;
-    }
-    .contact-details {
-      font-size: 1.04em;
-      line-height: 2;
-      margin-bottom: 1em;
-    }
-    .contact-details a {
-      color: var(--header-accent);
-      font-weight: bold;
-      text-decoration: underline;
-      transition: color .2s;
-    }
-    .contact-details a:hover, .contact-details a:focus {
-      color: #fff8a5;
-      outline: none;
-    }
-    .contact-invite {
-      background: var(--header-accent);
-      color: var(--header-bg);
-      border-radius: 36px;
-      font-family: 'Computer Modern Sans', 'Open Sans', Arial, sans-serif;
-      font-size: 1.07em;
-      font-weight: bold;
-      padding: 0.7em 1.7em;
-      margin-top: 1em;
-      text-decoration: none;
-      box-shadow: 0 2px 12px rgba(255,203,5,0.12);
-      transition: background 0.2s, color .2s;
+
+    /* -- EXCLUSIVE BUTTON -- */
+    .exclusive-contact-link {
       display: inline-block;
-    }
-    .contact-invite:hover, .contact-invite:focus {
-      background: #fff8a5;
-      color: var(--header-bg);
+      background: var(--umich-maize);
+      color: var(--umich-blue);
+      font-family: 'Computer Modern Sans', 'Open Sans', Arial, sans-serif;
+      font-size: 1.09rem;
+      font-weight: 700;
+      border-radius: 36px;
+      padding: 0.8em 2.5em;
+      box-shadow: 0 1px 9px rgba(255,203,5,0.13);
+      text-decoration: none;
+      transition: background 0.2s, color 0.15s;
+      border: none;
+      letter-spacing: 0.02em;
       outline: none;
     }
-    /* RESPONSIVE */
-    @media (max-width: 1100px) {
-      .hero-panel,
-      .benefit-panel,
-      .toolbox-feature-panel,
-      .contact-panel {
-        max-width: 98vw;
+    .exclusive-contact-link:hover,
+    .exclusive-contact-link:focus {
+      background: var(--umich-blue);
+      color: var(--umich-maize);
+    }
+
+    /* --- WHY US - CARD --- */
+    .whyus-section {
+      max-width: var(--main-max-width);
+      width: 100%;
+      background: #fff;
+      border-radius: 24px;
+      box-shadow: 0 7px 36px rgba(0,39,76,0.05);
+      margin: 2em auto 2.6em auto;
+      position: relative;
+      padding: 2.2em 2em 1.1em 2em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .whyus-section h2 {
+      font-family: 'Computer Modern Sans', 'Open Sans', Arial, sans-serif;
+      color: var(--umich-blue);
+      font-size: 1.45em;
+      letter-spacing: 0.02em;
+      font-weight: 700;
+      margin-top: 0;
+      margin-bottom: 1.2em;
+      border-bottom: 2px solid var(--umich-maize);
+      padding-bottom: 0.19em;
+      align-self: flex-start;
+    }
+    .whyus-feature-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2em;
+      justify-content: center;
+      margin-bottom: 2.2em;
+      width: 100%;
+    }
+    .whyus-feature {
+      background: linear-gradient(#f8f9fa 68%, #fffcf3 100%);
+      border-radius: 14px;
+      box-shadow: 0 2px 10px rgba(0,39,76,0.09);
+      flex: 1 1 170px;
+      min-width: 140px;
+      max-width: 220px;
+      text-align: center;
+      padding: 1.15em 0.9em;
+      font-size: 1.03em;
+    }
+    .icon-circle {
+      background: var(--umich-maize);
+      color: var(--umich-blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      width: 40px; height: 40px;
+      margin: 0 auto 0.78em auto;
+      box-shadow: 0 2px 10px rgba(255,203,5,.13);
+    }
+    .feature-title {
+      font-family: 'Computer Modern Sans', 'Open Sans', Arial, sans-serif;
+      color: var(--umich-blue);
+      font-weight: 700;
+      font-size: 1.04em;
+      margin-bottom: 0.6em;
+      margin-top: 0;
+      letter-spacing:0.02em;
+    }
+    .feature-desc {
+      color: #254366;
+      font-size: 0.99em;
+      line-height: 1.58;
+    }
+
+    @media (max-width: 800px) {
+      .homepage-hero,
+      .whyus-section {
+        border-radius: 14px;
+        padding: 1.5em 0.7em;
+      }
+      .whyus-section h2 {
+        font-size: 1.3em;
+        padding-bottom: 0.1em;
       }
     }
-    @media (max-width: 900px) {
-      .benefits-row {
-        flex-direction: column;
-        gap: 1.6em;
-        align-items: stretch;
-      }
-      .benefit-col {
-        max-width: none;
-      }
-    }
-    @media (max-width: 700px) {
-      .site-header-content {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .logo { margin-bottom: 6px; }
-      .site-title {
-        font-size: 1.2rem;
-        margin-bottom: 3px;
-      }
-      .hero-panel, .benefit-panel, .toolbox-feature-panel, .contact-panel {
-        padding: 1.1em 0.55em;
-        border-radius: 12px;
-      }
-      .hero-panel { padding-top: 2.2em }
-      .hero-headline { font-size: 1.33rem }
-      .hero-sub { font-size: 1rem; padding: 0.3em 0.6em;}
+    @media (max-width: 600px) {
+      main { min-height: 50vh; }
+      .homepage-hero h1 { font-size: 1.45rem; }
+      .hero-tagline { font-size: 1.05rem; }
+      .whyus-feature-list { flex-direction: column; gap: 1.05em;}
+      .whyus-feature { max-width: 100%; }
     }
   </style>
 </head>
@@ -338,85 +241,64 @@
   <header>
     <div class="site-header-content">
       <span class="logo" aria-label="2nd Street Appraisal logo">
-        <img src="img/Logo.png" alt="2nd Street Appraisal Company logo" width="48" height="48" style="vertical-align:middle;">
+        <img src="img/Logo.png" alt="2nd Street Appraisal Company logo" width="48" height="48">
       </span>
       <span class="site-title">Second Street Appraisal Company</span>
     </div>
   </header>
   <main>
-    <!-- Hero Section -->
-    <section class="hero-panel">
-      <div class="hero-headline">
-        Elite Appraisal Services<br>
-        Tailored For Visionaries
+    <section class="homepage-hero">
+      <h1>
+        Discerning Asset Valuation
+      </h1>
+      <span class="hero-underline"></span>
+      <div class="hero-tagline">
+        Reserved for select clients.
       </div>
-      <div class="hero-sub">
-        By Invitation Only
-      </div>
-      <div class="hero-lead">
-        Unlock a truly distinguished experience. Our exclusive appraisals and strategic advisory are reserved for select clients demanding exceptional accuracy, privacy, and impact.
-      </div>
-      <a href="mailto:info@2ndstreetappraisal.com?subject=Request%20Invitation" class="cta-button">
-        Request Invitation
+      <p class="hero-lead">
+        Unlock trusted expertise and individualized attention. Second Street’s exclusive service features tailored appraisals and premium advisory, where accuracy, privacy, and impact are standard.
+      </p>
+      <a 
+        href="mailto:info@2ndstreetappraisal.com?subject=Request%20Consultation" 
+        class="exclusive-contact-link"
+      >
+        Request Consultation
       </a>
     </section>
-    <!-- Benefits Section -->
-    <section class="benefit-panel">
-      <div class="benefit-title">Why Choose Second Street?</div>
-      <div class="benefits-row">
-        <div class="benefit-col">
-          <!-- Shield Icon -->
-          <svg width="38" height="38" viewBox="0 0 36 36">
-            <circle cx="18" cy="18" r="17" fill="#FFCB05" stroke="#00274C" stroke-width="2"/>
-            <path d="M18 25C22 25 25 22 25 17V13L18 10L11 13V17C11 22 14 25 18 25Z"
-                  fill="#00274C"/>
-          </svg>
-          <div class="benefit-col-title">Confidential & Secure</div>
-          <div class="benefit-col-desc">Your assets and information are protected with elite security and absolute discretion, start to finish.</div>
+    <section class="whyus-section">
+      <h2>Our Advantages</h2>
+      <div class="whyus-feature-list">
+        <div class="whyus-feature">
+          <div class="icon-circle">
+            <!-- Shield icon (unicode) -->
+            &#128272;
+          </div>
+          <div class="feature-title">Confidentiality First</div>
+          <div class="feature-desc">
+            Every engagement is conducted with absolute privacy and discretion, protecting your assets at every stage.
+          </div>
         </div>
-        <div class="benefit-col">
-          <!-- Star Icon -->
-          <svg width="38" height="38" viewBox="0 0 36 36">
-            <circle cx="18" cy="18" r="17" fill="#FFCB05" stroke="#00274C" stroke-width="2"/>
-            <polygon points="18,8 21,16 29,16 22,21 25,29 18,24 11,29 14,21 7,16 15,16"
-                fill="#00274C"/>
-          </svg>
-          <div class="benefit-col-title">Bespoke Appraisals</div>
-          <div class="benefit-col-desc">Every valuation is custom-tailored to your needs, empowering your most important decisions.</div>
+        <div class="whyus-feature">
+          <div class="icon-circle">
+            <!-- Diamond icon (unicode) -->
+            &#128142;
+          </div>
+          <div class="feature-title">Tailored Service</div>
+          <div class="feature-desc">
+            Your experience is individually crafted—no generic reports, just precise valuation aligned with your goals.
+          </div>
         </div>
-        <div class="benefit-col">
-          <!-- Chart Icon -->
-          <svg width="38" height="38" viewBox="0 0 36 36">
-            <circle cx="18" cy="18" r="17" fill="#FFCB05" stroke="#00274C" stroke-width="2"/>
-            <rect x="10" y="21" width="4" height="5" fill="#00274C"/>
-            <rect x="16" y="16" width="4" height="10" fill="#00274C"/>
-            <rect x="22" y="11" width="4" height="15" fill="#00274C"/>
-          </svg>
-          <div class="benefit-col-title">Industry Leadership</div>
-          <div class="benefit-col-desc">Benefit from expert insight, cutting-edge analytics, and a legacy of proven results for select clients.</div>
+        <div class="whyus-feature">
+          <div class="icon-circle">
+            <!-- Chart line up (unicode) -->
+            &#128200;
+          </div>
+          <div class="feature-title">Proven Results</div>
+          <div class="feature-desc">
+            Our expertise delivers defensible appraisals and forward-thinking guidance trusted by high-profile clientele.
+          </div>
         </div>
       </div>
-    </section>
-    <!-- Feature Section -->
-    <section class="toolbox-feature-panel">
-      <div class="toolbox-title">appraisalToolbox: Exclusive Technology</div>
-      <div class="toolbox-desc">
-        Seamlessly monitor progress, manage secure documentation, and collaborate with our experts from anywhere. Our proprietary appraisalToolbox platform empowers you with transparent, actionable insights—only accessible to 2nd Street clients.<br>
-        <br>
-        <strong>Experience the future of asset management, by invitation only.</strong>
-      </div>
-    </section>
-    <!-- Contact Panel -->
-    <section class="contact-panel">
-      <div class="contact-title">Contact & Location</div>
-      <div class="contact-details">
-        <div>Email: <a href="mailto:info@2ndstreetappraisal.com">info@2ndstreetappraisal.com</a></div>
-        <div>Phone: <a href="tel:5551234567">(555) 123-4567</a></div>
-        <div>Address: 114 E 2ND STREET, ROCHESTER, MI 48307</div>
-      </div>
-      <a class="contact-invite" href="mailto:info@2ndstreetappraisal.com?subject=Request%20Invitation">
-        Request Invitation
-      </a>
     </section>
   </main>
 </body>
