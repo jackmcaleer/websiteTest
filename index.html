@@ -6,7 +6,7 @@
   <title>Second Street Appraisal Company</title>
   <!-- Open Sans for body text -->
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-  <!-- Computer Modern Sans (Latin Modern Sans equivalent) for header -->
+  <!-- Computer Modern Sans for header -->
   <link href="https://fonts.cdnfonts.com/css/computer-modern" rel="stylesheet">
   <style>
     :root {
@@ -60,57 +60,6 @@
       letter-spacing: 0.03em;
       color: var(--header-accent);
       flex: 1 1 auto;
-    }
-    nav {
-      text-align: center;
-      padding: 0.7rem 0 0.3rem 0;
-    }
-    nav button {
-      background: none;
-      color: var(--text-on-dark);
-      border: none;
-      margin: 0 1.2rem;
-      font-weight: 700;
-      font-size: 1rem;
-      padding: 0.2em 0.4em;
-      border-radius: 3px;
-      cursor: pointer;
-      transition: background 0.2s, color 0.2s;
-    }
-    nav button:focus, nav button:hover {
-      background: var(--header-accent);
-      color: var(--header-bg);
-      outline: 2px solid var(--header-accent);
-      outline-offset: 2px;
-    }
-    nav button[aria-selected="true"] {
-      text-decoration: underline;
-      background: var(--header-accent);
-      color: var(--header-bg);
-    }
-    .tab-section {
-      display: none;
-      max-width: 900px;
-      margin: 2rem auto;
-      background: white;
-      padding: 2rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(34,67,86,0.07);
-      animation: fadein 0.3s;
-    }
-    @keyframes fadein {
-      from { opacity: 0; transform: translateY(20px);}
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .tab-section.active {
-      display: block;
-    }
-    #panel-home.tab-section {
-      background: none;
-      box-shadow: none;
-      padding: 0;
-      max-width: none;
-      margin: 0;
     }
     .homepage-hero,
     .whyus-section {
@@ -194,130 +143,10 @@
     .whyus-section p {
       margin-bottom: 2.1em;
     }
-    h2 {
-      color: var(--header-bg);
-      font-size: 1.7rem;
-      margin-top: 0;
-    }
-    ul {
-      padding-left: 1.1em;
-    }
-    .contact-info {
-      background: #f1f3f6;
-      padding: 1rem;
-      border-radius: 4px;
-      font-size: 1rem;
-    }
-    a, a:visited {
-      color: #0052a5;
-    }
-    a:focus {
-      outline: 2px solid var(--header-accent);
-      outline-offset: 2px;
-    }
-    .privacy-note {
-      font-size: 0.95em;
-      color: #5c5c5c;
-      margin: 1em 0 0 0;
-    }
-    .service-cards {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-      margin-top: 1rem;
-      margin-bottom: 1rem;
-    }
-    .service-card {
-      background: #f6f6f8;
-      border-radius: 9px;
-      border: 2px solid var(--umich-maize);
-      box-shadow: 0 2px 8px rgba(34,67,86,0.07);
-      padding: 1.3rem 1.2rem 1rem;
-      width: 100%;
-      max-width: 900px;
-      margin: 0 auto;
-      box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-    }
-    .service-card h3 {
-      margin-top: 0;
-      margin-bottom: 0.5em;
-      color: var(--umich-blue);
-      font-size: 1.35rem;
-    }
-    .service-card ul {
-      margin-bottom: 1em;
-    }
-    .service-card .subtitle {
-      font-weight: bold;
-      color: var(--umich-blue);
-      margin-bottom: 0.2em;
-      margin-top: 0.5em;
-      font-size: 1.07em;
-    }
-    .card-details {
-      display: flex;
-      gap: 2.5rem;
-      margin-top: 1em;
-      flex-wrap: wrap;
-      justify-content: flex-start;
-    }
-    .card-col {
-      flex: 1 1 220px;
-      min-width: 190px;
-      max-width: 50%;
-    }
-    /* TEAM GALLERY with greyed-out images */
-    .team-gallery {
-      display: flex;
-      gap: 2.4rem;
-      justify-content: center;
-      align-items: flex-start;
-      flex-wrap: wrap;
-      margin-top: 2.3rem;
-    }
-    .team-member {
-      flex: 0 1 160px;
-      min-width: 160px;
-      max-width: 220px;
-      text-align: center;
-    }
-    .team-member img {
-      width: 100%;
-      max-width: 120px;
-      aspect-ratio: 1/1;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 0.7em;
-      border: 3px solid #00274C33;
-      box-shadow: 0 2px 8px rgba(34,67,86,0.13);
-      filter: grayscale(100%);
-      background: #e4e4e4;
-      transition: filter 0.25s;
-    }
-    .team-member img:hover,
-    .team-member img:focus {
-      filter: grayscale(0%);
-    }
-    .member-name {
-      color: #00274C;
-      font-weight: 700;
-      font-size: 1.08em;
-      margin-bottom: 0.1em;
-    }
-    .member-title {
-      color: #234356;
-      font-size: 1em;
-      font-weight: 400;
-    }
     @media (max-width: 900px) {
-      .tab-section, .hero {
+      .homepage-hero, .whyus-section {
         max-width: 100%;
         padding: 1rem;
-      }
-      .service-card {
-        max-width: 100%;
       }
     }
     @media (max-width: 700px) {
@@ -332,33 +161,12 @@
         font-size: 1.2rem;
         margin-bottom: 3px;
       }
-      nav button {
-        margin: 0 0.3rem;
-        font-size: 0.98rem;
-      }
       .homepage-hero, .whyus-section {
         padding: 1.3rem 0.6rem 1rem 0.6rem;
         max-width: 98vw;
       }
       .hero-tagline { font-size: 1rem; }
       .hero-lead { font-size: 1em; }
-      .card-details {
-        flex-direction: column;
-        gap: 1.3rem;
-      }
-      .card-col {
-        max-width: 100%;
-      }
-      .team-gallery {
-        flex-direction: column;
-        align-items: center;
-        gap: 1.4rem;
-      }
-      .team-member {
-        width: 100%;
-        min-width: 0;
-        max-width: 260px;
-      }
       .whyus-bar { height: 12px; }
     }
   </style>
@@ -371,15 +179,8 @@
       </span>
       <span class="site-title">Second Street Appraisal Company</span>
     </div>
-    <nav aria-label="Main navigation" role="tablist">
-      <button role="tab" id="tab-home" aria-selected="true" aria-controls="panel-home" tabindex="0" onclick="showSection('home')">Home</button>
-      <button role="tab" id="tab-about" aria-selected="false" aria-controls="panel-about" tabindex="-1" onclick="showSection('about')">About Us</button>
-      <button role="tab" id="tab-services" aria-selected="false" aria-controls="panel-services" tabindex="-1" onclick="showSection('services')">Services</button>
-      <button role="tab" id="tab-media" aria-selected="false" aria-controls="panel-media" tabindex="-1" onclick="showSection('media')">Media</button>
-      <button role="tab" id="tab-contact" aria-selected="false" aria-controls="panel-contact" tabindex="-1" onclick="showSection('contact')">Contact</button>
-    </nav>
   </header>
-  <div id="panel-home" class="tab-section active" role="tabpanel" aria-labelledby="tab-home" tabindex="0">
+  <main>
     <section class="homepage-hero">
       <h1>APPRAISALS, SALES, &amp; ADVISORY</h1>
       <div class="hero-tagline">Manage your assets effectively</div>
@@ -399,180 +200,6 @@
       </p>
       <span class="whyus-bar"></span>
     </div>
-  </div>
-  <div id="panel-about" class="tab-section" role="tabpanel" aria-labelledby="tab-about" tabindex="0">
-    <h2>About Us</h2>
-    <p>
-      2nd Street Appraisal brings professional experience in asset managment, serving clients with precision, reliability, and integrity. Our team’s expertise spans a wide range of industries and asset classes, enabling us to provide accurate valuations that support business decisions, lending, compliance, and asset management.
-
-Recognizing that the appraisal industry is evolving, we are passionate about improving the process through innovation. By combining traditional, time-honored valuation methodology with proprietary technology solutions—including our custom-built appraisalToolbox platform—we streamline workflow, enhance report accuracy, and empower clients with transparent progress tracking.
-
-At 2nd Street Appraisal, we’re committed not only to delivering trusted, defensible values, but also to shaping the future of the profession with forward-thinking tools that make every engagement more efficient and insightful
-    </p>
-    <div class="team-gallery">
-      <div class="team-member">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png" alt="Default user avatar">
-        <div class="member-name">John Doe</div>
-        <div class="member-title">Founder &amp; CEO</div>
-      </div>
-      <div class="team-member">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png" alt="Default user avatar">
-        <div class="member-name">Jane Smith</div>
-        <div class="member-title">Senior Appraiser</div>
-      </div>
-    </div>
-  </div>
-  <div id="panel-services" class="tab-section" role="tabpanel" aria-labelledby="tab-services" tabindex="0">
-    <h2>Services</h2>
-    <div class="service-cards">
-      <section class="service-card">
-        <h3>Appraisals</h3>
-        <p>
-          We deliver accurate assessments, emphasizing defensibility and adherence to industry standards.
-          To ensure credibility, every appraisal undergoes a meticulous review process by an Accredited Appraiser affiliated with the American Society of Appraisers. With a commitment to thoroughness, we provide tailored and trustworthy valuation services that meet your specific needs.
-          Choose 2nd Street for a dedicated team that combines extensive experience with the highest standards, offering confidence in the accuracy of your asset valuations.
-        </p>
-        <div class="card-details">
-          <div class="card-col">
-            <div class="subtitle">What we do</div>
-            <ul>
-              <li>Inventory Appraisals</li>
-              <li>Equipment Appraisals</li>
-              <li>Physical Inspection</li>
-              <li>Desktop Appraisals</li>
-              <li>Future Value Projections - Equipment</li>
-              <li>Depreciation Studies</li>
-              <li>Intangible Valuations</li>
-              <li>Real Estate Appraisals</li>
-              <li>Lease End Inspections</li>
-              <li>Physical Asset Inspections</li>
-              <li>…and more!</li>
-            </ul>
-          </div>
-          <div class="card-col">
-            <div class="subtitle">When we do it</div>
-            <ul>
-              <li>Advisory</li>
-              <li>Bankruptcy</li>
-              <li>Business Planning</li>
-              <li>Employee Stock Option Planning (ESOP)</li>
-              <li>Financial Reporting/Audit Review</li>
-              <li>Financing</li>
-              <li>Insurance</li>
-              <li>Litigation Support</li>
-              <li>Liquidations</li>
-              <li>Mergers &amp; Acquisitions</li>
-              <li>Sale &amp; Leaseback</li>
-              <li>Tax Advisory</li>
-              <li>...and more!</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-      <section class="service-card">
-        <h3>Advisory</h3>
-        <p>
-          Our experience in dealing with fixed assets across a wide spectrum of industries has equipped us with a profound understanding of the unique challenges and opportunities present in various sectors.
-          This depth of insight allows us to not only understand the intricacies of your specific challenges but also to offer innovative solutions that consistently deliver tangible results.
-          At 2nd Street, you can rely on our expertise to meet your challenges with a history of proven excellence.
-        </p>
-        <div class="card-details">
-          <div class="card-col">
-            <div class="subtitle">What we do</div>
-            <ul>
-              <li>Future Value Projections</li>
-              <li>Asset Disposition</li>
-              <li>Lease End Inspections</li>
-              <li>Equipment Inspections</li>
-              <li>Asset Remarketing</li>
-              <li>Case Studies</li>
-              <li>Matrices</li>
-              <li>Bankruptcy</li>
-              <li>M&amp;A</li>
-              <li>Portfolio Review</li>
-              <li>Physical Asset Inspections</li>
-              <li>Repossession of Assets</li>
-              <li>Depreciation Studies</li>
-              <li>White Papers</li>
-              <li>and more!</li>
-            </ul>
-          </div>
-          <div class="card-col">
-            <div class="subtitle">When we do it</div>
-            <ul>
-              <li>Accounting</li>
-              <li>Bankruptcy</li>
-              <li>Business Planning</li>
-              <li>Employee Stock Option Planning (ESOP)</li>
-              <li>Financial Planning</li>
-              <li>Leasing</li>
-              <li>Litigation Support</li>
-              <li>Mergers &amp; Acquisitions</li>
-              <li>Tax Advisory</li>
-              <li>...and more!</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-    </div>
-  </div>
-  <div id="panel-media" class="tab-section" role="tabpanel" aria-labelledby="tab-media" tabindex="0">
-    <h2>Media</h2>
-    <p>
-      Showcase recent work, testimonials, or press mentions here. Add photos, video links, or documents as needed.
-    </p>
-    <!-- Example placeholder for an image -->
-    <!--
-    <img src="your-image-link.jpg" alt="Office photo" style="max-width:100%;border-radius:4px;">
-    -->
-  </div>
-  <div id="panel-contact" class="tab-section" role="tabpanel" aria-labelledby="tab-contact" tabindex="0">
-    <h2>Contact</h2>
-    <div class="contact-info">
-      <p>Email: <a href="mailto:info@2ndstreetappraisal.com">info@2ndstreetappraisal.com</a></p>
-      <p>Phone: (555) 123-4567</p>
-      <p>Address: 114 E 2ND STREET, ROCHESTER, MI 48307</p>
-    </div>
-    <div class="privacy-note">
-      <strong>Privacy Notice:</strong> Your contact information is confidential and will only be used to respond to your inquiries. We do not share your information with third parties.
-    </div>
-  </div>
-  <script>
-    const tabs = [
-      { tab: "tab-home", panel: "panel-home" },
-      { tab: "tab-about", panel: "panel-about" },
-      { tab: "tab-services", panel: "panel-services" },
-      { tab: "tab-media", panel: "panel-media" },
-      { tab: "tab-contact", panel: "panel-contact" }
-    ];
-
-    function showSection(section) {
-      tabs.forEach(({tab, panel}) => {
-        document.getElementById(tab).setAttribute("aria-selected", section === tab.replace('tab-','') ? "true" : "false");
-        document.getElementById(tab).tabIndex = section === tab.replace('tab-','') ? 0 : -1;
-        document.getElementById(panel).classList.toggle("active", section === tab.replace('tab-',''));
-      });
-      document.getElementById("panel-" + section).focus();
-    }
-    document.querySelector('nav[role="tablist"]').addEventListener('keydown', function(e){
-      const tabOrder = tabs.map(t => t.tab);
-      let idx = tabOrder.indexOf(document.activeElement.id);
-      if (e.key === "ArrowRight") {
-        idx = (idx + 1) % tabs.length;
-        document.getElementById(tabOrder[idx]).focus();
-        e.preventDefault();
-      } else if (e.key === "ArrowLeft") {
-        idx = (idx - 1 + tabs.length) % tabs.length;
-        document.getElementById(tabOrder[idx]).focus();
-        e.preventDefault();
-      } else if (e.key === "Home") {
-        document.getElementById(tabOrder[0]).focus();
-        e.preventDefault();
-      } else if (e.key === "End") {
-        document.getElementById(tabOrder[tabs.length-1]).focus();
-        e.preventDefault();
-      }
-    });
-  </script>
+  </main>
 </body>
 </html>
