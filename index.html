@@ -4,9 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Second Street Appraisal Company</title>
-  <!-- Open Sans for body text -->
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-  <!-- Computer Modern Sans for header -->
   <link href="https://fonts.cdnfonts.com/css/computer-modern" rel="stylesheet">
   <style>
     :root {
@@ -14,7 +12,7 @@
       --umich-maize: #FFCB05;
       --header-bg: var(--umich-blue);
       --header-accent: var(--umich-maize);
-      --main-max-width: 700px;
+      --main-max-width: 740px;
     }
     body {
       font-family: 'Open Sans', Arial, sans-serif;
@@ -48,7 +46,6 @@
       height: 48px;
       vertical-align: middle;
       border-radius: 13px;
-      border: 2px solid var(--header-accent);
       background: #fff;
       box-shadow: 0 4px 16px rgba(0,39,76,0.10);
     }
@@ -59,71 +56,167 @@
       letter-spacing: 0.04em;
       color: var(--header-accent);
     }
-
-    /* --- EXCLUSIVE HERO --- */
     main {
       display: flex;
       flex-direction: column;
       align-items: center;
-      min-height: 82vh;
+      min-height: 80vh;
       background: linear-gradient(120deg,#fff 64%,#fffcf3 100%);
     }
-    .homepage-hero {
-      background: linear-gradient(105deg, #f3f5fa 80%, #fffcf3 100%);
-      border-radius: 24px;
+    /* Value Proposition */
+    .value-prop {
+      background: linear-gradient(104deg, #f4f7fb 80%, #fffbe7 100%);
+      border-radius: 22px;
       box-shadow: 0 7px 36px rgba(0,39,76,0.09), 0 2px 10px rgba(255,203,5,0.07);
       max-width: var(--main-max-width);
       width: 100%;
-      margin-top: 4em;
-      padding: 3em 2em 2.4em 2em;
+      margin-top: 3.5em;
+      padding: 2.9em 2em 2.4em 2em;
       position: relative;
       text-align: center;
     }
-    .homepage-hero h1 {
+    .value-headline {
       font-family: 'Computer Modern Sans', 'Open Sans', Arial, sans-serif;
-      font-size: 2.6rem;
+      font-size: 2.2rem;
       font-weight: 700;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.055em;
       color: var(--header-bg);
       margin-bottom: 0.5em;
-      text-shadow: 0 1px 28px rgba(0,39,76,.09);
-      position: relative;
-      display: inline-block;
     }
-    .hero-underline {
-      display: block;
-      margin: 0.2em auto 1.3em auto;
-      width: 80px;
-      height: 7px;
-      border-radius: 5px;
-      background: linear-gradient(90deg,var(--umich-maize) 5%,#fff3bc 100%);
-      animation: showUnder 1.5s;
-    }
-    @keyframes showUnder {
-      from {width:0; opacity:0;}
-      to {width:80px; opacity:1;}
-    }
-    .hero-tagline {
-      font-family: 'Computer Modern Sans', 'Open Sans', Arial, sans-serif;
-      color: var(--umich-maize);
-      font-size: 1.25rem;
-      font-weight: 600;
-      margin-bottom: 1.2em;
-      letter-spacing: 0.04em;
-    }
-    .hero-lead {
-      font-size: 1.07rem;
+    .value-bullets {
+      margin: 1.5em auto 0.9em auto;
+      text-align: left;
+      max-width: 470px;
+      font-size: 1.12em;
+      padding: 0 1.2em;
       color: #234356;
-      margin-top: 0.7em;
-      margin-bottom: 2.2em;
-      line-height: 1.77;
+    }
+    .value-bullets ul {
+      margin: 0;
+      padding-left: 1.2em;
+    }
+    .value-bullets li {
+      margin-bottom: 0.75em;
+      line-height: 1.7;
+      position: relative;
+      font-size: 1em;
+      font-weight: 500;
+    }
+    .value-bullets li:before {
+      content: "";
+      display: inline-block;
+      width: 0.75em;
+      height: 0.75em;
+      background: var(--header-accent);
+      border-radius: 50%;
+      margin-right: 0.8em;
+      vertical-align: middle;
+      box-shadow: 0 0 6px rgba(255,203,5,0.09);
+    }
+    /* Growth & SMART Goals Section */
+    .smart-section {
+      max-width: var(--main-max-width);
+      width: 100%;
+      margin: 2.3em auto 0.5em auto;
+      border-radius: 22px;
+      background: #fff;
+      box-shadow: 0 4px 18px rgba(0,39,76,0.08);
+      padding: 2.2em 2em 2em 2em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .smart-title {
+      font-family: 'Computer Modern Sans', 'Open Sans', Arial, sans-serif;
+      color: var(--umich-blue);
+      font-size: 1.38em;
+      letter-spacing: 0.02em;
+      font-weight: 700;
+      margin-bottom: 1.1em;
+      text-align: center;
+    }
+    .smart-list {
+      display: flex;
+      gap: 2em;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+      margin-bottom: 1em;
+    }
+    .smart-card {
+      background: linear-gradient(95deg, #f8f9fa 69%, #fffde3 100%);
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,39,76,0.08);
+      flex: 1 1 145px;
+      min-width: 130px;
+      max-width: 200px;
+      text-align: center;
+      padding: 1em 0.9em;
+      margin-bottom: 0.2em;
+    }
+    .smart-emoji {
+      font-size: 1.7em;
+      margin-bottom: 0.4em;
+    }
+    .smart-objective {
+      color: #00274C;
+      font-size: 1.03em;
+      font-weight: 700;
+      margin-bottom: 0.2em;
+    }
+    .smart-desc {
+      font-size: 0.98em;
+      color: #254366;
+      line-height: 1.58;
+      margin-bottom: 0.2em;
+    }
+    /* Relationship Section */
+    .relationship-section {
+      max-width: var(--main-max-width);
+      width: 100%;
+      border-radius: 22px;
+      background: #fff;
+      box-shadow: 0 4px 20px rgba(0,39,76,0.11);
+      padding: 2.3em 2em 1.5em 2em;
+      margin: 2em auto 2.5em auto;
+      text-align: center;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .relation-title {
+      font-family: 'Computer Modern Sans', 'Open Sans', Arial, sans-serif;
+      color: var(--header-accent);
+      font-size: 1.33em;
+      font-weight: 700;
+      margin-bottom: 1em;
+      letter-spacing: 0.02em;
+    }
+    .relation-lead {
+      font-size: 1.11em;
+      color: #234356;
+      margin-bottom: 1em;
+      font-weight: 500;
+      line-height: 1.7;
       max-width: 500px;
       margin-left: auto;
       margin-right: auto;
-      letter-spacing: 0.01em;
     }
-
-    /* -- EXCLUSIVE BUTTON -- */
+    .relation-badge {
+      display: inline-block;
+      background: var(--header-accent);
+      color: var(--umich-blue);
+      font-family: 'Computer Modern Sans', 'Open Sans', Arial, sans-serif;
+      font-size: 1.12em;
+      font-weight: 700;
+      border-radius: 19px;
+      padding: 0.35em 1.5em;
+      margin-top: 0.4em;
+      letter-spacing: 0.03em;
+      box-shadow: 0 2px 9px rgba(255,203,5,0.12);
+    }
+    /* Call to Action Button */
     .exclusive-contact-link {
       display: inline-block;
       background: var(--umich-maize);
@@ -139,101 +232,31 @@
       border: none;
       letter-spacing: 0.02em;
       outline: none;
+      margin-top: 1.3em;
+      margin-bottom: 0.9em;
     }
     .exclusive-contact-link:hover,
     .exclusive-contact-link:focus {
       background: var(--umich-blue);
       color: var(--umich-maize);
     }
-
-    /* --- WHY US - CARD --- */
-    .whyus-section {
-      max-width: var(--main-max-width);
-      width: 100%;
-      background: #fff;
-      border-radius: 24px;
-      box-shadow: 0 7px 36px rgba(0,39,76,0.05);
-      margin: 2em auto 2.6em auto;
-      position: relative;
-      padding: 2.2em 2em 1.1em 2em;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .whyus-section h2 {
-      font-family: 'Computer Modern Sans', 'Open Sans', Arial, sans-serif;
-      color: var(--umich-blue);
-      font-size: 1.45em;
-      letter-spacing: 0.02em;
-      font-weight: 700;
-      margin-top: 0;
-      margin-bottom: 1.2em;
-      border-bottom: 2px solid var(--umich-maize);
-      padding-bottom: 0.19em;
-      align-self: flex-start;
-    }
-    .whyus-feature-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2em;
-      justify-content: center;
-      margin-bottom: 2.2em;
-      width: 100%;
-    }
-    .whyus-feature {
-      background: linear-gradient(#f8f9fa 68%, #fffcf3 100%);
-      border-radius: 14px;
-      box-shadow: 0 2px 10px rgba(0,39,76,0.09);
-      flex: 1 1 170px;
-      min-width: 140px;
-      max-width: 220px;
-      text-align: center;
-      padding: 1.15em 0.9em;
-      font-size: 1.03em;
-    }
-    .icon-circle {
-      background: var(--umich-maize);
-      color: var(--umich-blue);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 50%;
-      width: 40px; height: 40px;
-      margin: 0 auto 0.78em auto;
-      box-shadow: 0 2px 10px rgba(255,203,5,.13);
-    }
-    .feature-title {
-      font-family: 'Computer Modern Sans', 'Open Sans', Arial, sans-serif;
-      color: var(--umich-blue);
-      font-weight: 700;
-      font-size: 1.04em;
-      margin-bottom: 0.6em;
-      margin-top: 0;
-      letter-spacing:0.02em;
-    }
-    .feature-desc {
-      color: #254366;
-      font-size: 0.99em;
-      line-height: 1.58;
-    }
-
     @media (max-width: 800px) {
-      .homepage-hero,
-      .whyus-section {
+      .value-prop,
+      .relationship-section,
+      .smart-section {
         border-radius: 14px;
         padding: 1.5em 0.7em;
       }
-      .whyus-section h2 {
-        font-size: 1.3em;
-        padding-bottom: 0.1em;
+      .value-headline {
+        font-size: 1.33em;
       }
     }
     @media (max-width: 600px) {
       main { min-height: 50vh; }
-      .homepage-hero h1 { font-size: 1.45rem; }
-      .hero-tagline { font-size: 1.05rem; }
-      .whyus-feature-list { flex-direction: column; gap: 1.05em;}
-      .whyus-feature { max-width: 100%; }
+      .value-prop { padding-top: 1.2em; }
+      .smart-list { flex-direction: column; gap: 1em;}
+      .smart-card { max-width: 100%; }
+      .relation-title, .smart-title { font-size: 1.1em;}
     }
   </style>
 </head>
@@ -247,58 +270,64 @@
     </div>
   </header>
   <main>
-    <section class="homepage-hero">
-      <h1>
-        Discerning Asset Valuation
-      </h1>
-      <span class="hero-underline"></span>
-      <div class="hero-tagline">
-        Reserved for select clients.
+    <!-- Value Proposition Panel -->
+    <section class="value-prop">
+      <div class="value-headline">
+        Distinct Value. Real Relationships.
       </div>
-      <p class="hero-lead">
-        Unlock trusted expertise and individualized attention. Second Street’s exclusive service features tailored appraisals and premium advisory, where accuracy, privacy, and impact are standard.
-      </p>
-      <a 
-        href="mailto:info@2ndstreetappraisal.com?subject=Request%20Consultation" 
-        class="exclusive-contact-link"
-      >
+      <div class="value-bullets">
+        <ul>
+          <li>We build lasting personal connections with our clients—beyond transactions.</li>
+          <li>Responsive, hands-on team willing to do what others won’t.</li>
+          <li>Industry expertise and people skills make us the go-to for complex projects.</li>
+          <li>Cost-effective with attention to every detail, even the hard work competitors avoid.</li>
+        </ul>
+      </div>
+      <a href="mailto:info@2ndstreetappraisal.com?subject=Request%20Consultation" 
+         class="exclusive-contact-link">
         Request Consultation
       </a>
     </section>
-    <section class="whyus-section">
-      <h2>Our Advantages</h2>
-      <div class="whyus-feature-list">
-        <div class="whyus-feature">
-          <div class="icon-circle">
-            <!-- Shield icon (unicode) -->
-            &#128272;
-          </div>
-          <div class="feature-title">Confidentiality First</div>
-          <div class="feature-desc">
-            Every engagement is conducted with absolute privacy and discretion, protecting your assets at every stage.
-          </div>
+    <!-- SMART & Growth Mindset Section -->
+    <section class="smart-section">
+      <div class="smart-title">Strategy & Growth: Our SMART Objectives</div>
+      <div class="smart-list">
+        <div class="smart-card">
+          <div class="smart-emoji">&#9989;</div>
+          <div class="smart-objective">Specific</div>
+          <div class="smart-desc">Persuade clients to learn, share, and do business with us.</div>
         </div>
-        <div class="whyus-feature">
-          <div class="icon-circle">
-            <!-- Diamond icon (unicode) -->
-            &#128142;
-          </div>
-          <div class="feature-title">Tailored Service</div>
-          <div class="feature-desc">
-            Your experience is individually crafted—no generic reports, just precise valuation aligned with your goals.
-          </div>
+        <div class="smart-card">
+          <div class="smart-emoji">&#128200;</div>
+          <div class="smart-objective">Measurable</div>
+          <div class="smart-desc">Track new inquiries, referrals, and project outcomes.</div>
         </div>
-        <div class="whyus-feature">
-          <div class="icon-circle">
-            <!-- Chart line up (unicode) -->
-            &#128200;
-          </div>
-          <div class="feature-title">Proven Results</div>
-          <div class="feature-desc">
-            Our expertise delivers defensible appraisals and forward-thinking guidance trusted by high-profile clientele.
-          </div>
+        <div class="smart-card">
+          <div class="smart-emoji">&#128640;</div>
+          <div class="smart-objective">Attainable</div>
+          <div class="smart-desc">Keep goals realistic, scalable, and focused on growth.</div>
+        </div>
+        <div class="smart-card">
+          <div class="smart-emoji">&#9981;</div>
+          <div class="smart-objective">Relevant</div>
+          <div class="smart-desc">Adapt to clients’ real challenges–not just theory.</div>
+        </div>
+        <div class="smart-card">
+          <div class="smart-emoji">&#9200;</div>
+          <div class="smart-objective">Time-Bound</div>
+          <div class="smart-desc">Deliver results faster than the competition.</div>
         </div>
       </div>
+    </section>
+    <!-- Relationship-Focused Panel -->
+    <section class="relationship-section">
+      <div class="relation-title">We Do What Others Won't</div>
+      <div class="relation-lead">
+        Our team isn’t afraid to roll up our sleeves—from boardroom strategy to “scrubbing the floors” when needed. We serve large corporations that expect more, and deliver real impact, not just reports.
+      </div>
+      <span class="relation-badge">
+        Dedicated. Action-Oriented. Growth Driven.
+      </span>
     </section>
   </main>
 </body>
