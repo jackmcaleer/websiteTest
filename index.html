@@ -10,316 +10,227 @@
     :root {
       --umich-blue: #00274C;
       --umich-maize: #FFCB05;
-      --shadow: 8px 8px 0px #FFCB05;
-      --panel-width: 800px;
-      --border-radius: 0;
+      --section-max: 720px;
+      --side-pad: 32px;
     }
     body {
       font-family: 'Open Sans', Arial, sans-serif;
-      background: #fffbea;
-      color: var(--umich-blue);
+      background: #f6f7f9;
+      color: #202c3c;
       margin: 0;
     }
     header {
       background: var(--umich-blue);
       color: #fff;
-      box-shadow: 0 2px 6px #001f38;
+      box-shadow: 0 2px 4px #00264508;
       position: sticky;
       top: 0;
-      z-index: 10;
       width: 100%;
+      z-index: 10;
     }
     .site-header-content {
       display: flex;
       align-items: center;
-      max-width: var(--panel-width);
+      max-width: var(--section-max);
       margin: 0 auto;
-      padding: 1.4rem 1.2rem 1.1rem 1.2rem;
-      box-sizing: border-box;
-      border-bottom: 6px solid var(--umich-maize);
+      padding: 1.1rem var(--side-pad);
+      border-bottom: 2px solid var(--umich-maize);
     }
     .logo {
       flex: 0 0 auto;
-      width: 56px;
-      height: 56px;
-      margin-right: 18px;
+      width: 46px;
+      height: 46px;
+      margin-right: 16px;
       display: inline-block;
     }
     .logo img {
-      width: 56px;
-      height: 56px;
+      width: 46px; height: 46px;
       vertical-align: middle;
+      border-radius: 10px;
       background: #fff;
-      box-shadow: 4px 4px 0 var(--umich-maize);
     }
     .site-title {
       font-family: 'Computer Modern Sans', 'Open Sans', Arial, sans-serif;
-      font-size: 2.2rem;
-      font-weight: 900;
-      letter-spacing: 0.12em;
+      font-size: 1.65rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
       color: var(--umich-maize);
-      text-shadow: 2px 2px 0 var(--umich-blue), 6px 6px 0 #fff;
-      margin-bottom: 0;
-      margin-top: 0;
     }
+
     main {
-      max-width: var(--panel-width);
+      max-width: var(--section-max);
       margin: 0 auto;
+      padding: 0 var(--side-pad);
       display: flex;
       flex-direction: column;
       gap: 0;
-      box-sizing: border-box;
-      padding: 0;
-      background: #fffbea;
+      background: #f6f7f9;
     }
-    .banner-bar {
-      width: 100%;
-      background: linear-gradient(90deg, var(--umich-maize) 72%, #fff 100%);
-      padding: 18px 24px;
-      font-family: 'Computer Modern Sans', 'Open Sans', Arial, sans-serif;
-      font-size: 1.18rem;
-      color: var(--umich-blue);
-      font-weight: 700;
-      text-align: left;
-      letter-spacing: 0.07em;
-      box-shadow: 0 6px 0 var(--umich-blue), 0 14px 18px #ffe48b58;
-    }
-    /* 80s Headline Block */
-    .headline-block {
-      width: 100%;
-      padding: 2.9em 2.2em 0.7em 2.2em;
-      background: var(--umich-blue);
-      box-sizing: border-box;
-      box-shadow: var(--shadow);
-      color: var(--umich-maize);
-      text-align: left;
-      border-radius: var(--border-radius);
-    }
-    .headline-main {
-      font-family: 'Computer Modern Sans', 'Open Sans', Arial, sans-serif;
-      font-size: 2.75rem;
-      font-weight: 900;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin: 0 0 0.3em 0;
-      text-shadow: 4px 4px 0 #fff, 8px 8px 0 #ffce3e;
-      line-height: 1.05;
-      padding-bottom: 0.08em;
-    }
-    .headline-sub {
-      font-family: 'Open Sans', Arial, sans-serif;
-      color: #fff;
-      font-size: 1.22rem;
-      letter-spacing: 0.07em;
-      font-weight: 700;
-      padding-bottom: 0.35em;
-    }
-    /* Value Propositions 80s Bullet Grid */
-    .value-grid {
-      width: 100%;
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-gap: 0;
-      border-radius: var(--border-radius);
+
+    /* Sleek Sections */
+    .section-card {
       background: #fff;
-      border-left: 9px solid var(--umich-maize);
-      box-shadow: 6px 6px 0 var(--umich-maize), 0 11px 18px #ffe48b38;
+      border-radius: 0;
+      border-left: 4px solid var(--umich-maize);
+      margin: 2.5em 0;
+      padding: 2em 2.1em;
       box-sizing: border-box;
-      padding: 2em 2em 1.3em 2.5em;
-      margin: 0 0 2.5em 0;
-    }
-    .value-prop-head {
-      font-family: 'Computer Modern Sans', 'Open Sans', Arial, sans-serif;
-      font-size: 1.35rem;
-      letter-spacing: 0.07em;
-      color: var(--umich-blue);
-      margin-bottom: 1.3em;
-      font-weight: bold;
-      text-transform: uppercase;
-      border-bottom: 3px solid var(--umich-maize);
-      display: inline-block;
-      background: #fff;
-      box-shadow: 2px 2px 0 #ffe48b88;
-      padding-right: 0.3em;
-    }
-    .value-bullets {
-      margin: 0;
-      padding-left: 1em;
-      color: var(--umich-blue);
-      font-size: 1.09em;
-      font-weight: 500;
-      text-shadow: 0 1px 0 #fffbea;
-    }
-    .value-bullets li {
-      margin-bottom: 1.3em;
-      position: relative;
-      line-height: 1.4;
-    }
-    .value-bullets li::before {
-      content: "■";
-      color: var(--umich-maize);
-      margin-right: 0.7em;
-      font-size: 1.20em;
-      position: absolute;
-      left: -1.1em;
-      top: 0;
-    }
-    /* SMART Grid */
-    .smart-section {
-      width: 100%;
-      background: #fff;
-      box-sizing: border-box;
-      border-radius: var(--border-radius);
-      border-right: 10px solid var(--umich-blue);
-      box-shadow: 6px 6px 0 var(--umich-blue), 0 8px 18px #00274c18;
-      padding: 1.7em 2em 1.8em 2.2em;
-      margin: 2.3em 0 0 0;
+      box-shadow: none;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
     }
-    .smart-title {
+    .section-title {
       font-family: 'Computer Modern Sans', 'Open Sans', Arial, sans-serif;
+      font-size: 1.35em;
+      font-weight: 700;
       color: var(--umich-blue);
-      font-size: 1.25rem;
-      font-weight: bold;
-      text-transform: uppercase;
-      margin-bottom: 1.7em;
-      letter-spacing: 0.05em;
-      border-bottom: 2px solid var(--umich-maize);
-      display: inline-block;
-      padding-right: 1.1em;
-      box-shadow: 2px 2px 0 #ffe48b74;
+      margin-bottom: 0.8em;
+      letter-spacing: 0.02em;
     }
-    .smart-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 1.3em;
-      width: 100%;
-    }
-    .smart-card {
-      background: #fffbea;
-      border: 2px solid var(--umich-maize);
-      border-radius: var(--border-radius);
-      box-shadow: 4px 4px 0 var(--umich-maize);
-      padding: 1.1em 0.8em;
-      font-size: 1em;
-      text-align: left;
-      min-width: 110px;
-    }
-    .smart-card .smart-title-in {
-      font-family: 'Computer Modern Sans', 'Open Sans', Arial, sans-serif;
-      color: var(--umich-blue);
-      font-weight: 600;
-      margin-bottom: 0.25em;
-      font-size: 0.99em;
-      text-transform: uppercase;
-    }
-    .smart-card .smart-desc {
-      font-size: 0.97em;
+    .section-sub {
+      font-size: 1.05em;
       color: #234356;
-      line-height: 1.42;
-    }
-    /* Relationship section */
-    .relationship-section {
-      width: 100%;
-      background: var(--umich-maize);
-      padding: 2.2em 2em 1.7em 2.5em;
-      box-shadow: 6px 6px 0 var(--umich-blue);
-      border-radius: var(--border-radius);
-      margin: 2.4em 0 1.6em 0;
-      text-align: left;
-      color: var(--umich-blue);
-      box-sizing: border-box;
-      letter-spacing: 0.03em;
-    }
-    .relation-title {
-      font-family: 'Computer Modern Sans', 'Open Sans', Arial, sans-serif;
-      font-size: 1.18em;
-      font-weight: bold;
-      text-transform: uppercase;
-      margin-bottom: 1em;
-      color: var(--umich-blue);
-      border-bottom: 2px solid var(--umich-blue);
-      display: inline-block;
-      box-shadow: 2px 2px 0 #fff;
-    }
-    .relation-lead {
-      font-size: 1.06em;
       margin-bottom: 1.2em;
-      max-width: 520px;
-      font-weight: 600;
+      font-weight: 500;
+      line-height: 1.7;
     }
-    .relation-badge {
+    /* Value Grid */
+    .value-bullets {
+      margin: 0;
+      padding-left: 1em;
+      color: #234356;
+      font-size: 1.04em;
+    }
+    .value-bullets li {
+      margin-bottom: 1em;
+      position: relative;
+      line-height: 1.5;
+      font-weight: 500;
+    }
+    .value-bullets li:before {
+      content: "";
       display: inline-block;
+      width: 0.7em; height: 0.7em;
+      background: var(--umich-maize);
+      border-radius: 50%;
+      margin-right: 0.9em;
+      vertical-align: middle;
+      position: relative;
+      top: -1px;
+    }
+    /* SMART objectives horizontal list */
+    .smart-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2em;
+      margin: 1.5em 0 0.5em 0;
+    }
+    .smart-item {
+      background: #f9fafb;
+      border-radius: 0;
+      border-left: 3px solid var(--umich-blue);
+      min-width: 120px;
+      max-width: 180px;
+      padding: 1em 1.1em;
+      margin-bottom: 0.2em;
+      font-size: 1em;
+      color: #234356;
+      display: flex;
+      flex-direction: column;
+    }
+    .smart-label {
+      color: var(--umich-blue);
+      font-size: 1em;
+      font-weight: 700;
+      margin-bottom: 0.42em;
+      font-family: 'Computer Modern Sans', 'Open Sans', Arial, sans-serif;
+    }
+    /* Relationship */
+    .relationship {
+      background: #fff;
+      border-left: 4px solid var(--umich-maize);
+      border-radius: 0;
+      margin: 2em 0 2.3em 0;
+      padding: 2em 2.1em;
+      box-sizing: border-box;
+      color: #234356;
+      display: flex;
+      flex-direction: column;
+    }
+    .relationship-title {
+      font-family: 'Computer Modern Sans', 'Open Sans', Arial, sans-serif;
+      font-size: 1.15em;
+      font-weight: bold;
+      color: var(--umich-blue);
+      margin-bottom: 1em;
+    }
+    .relationship-badge {
       background: var(--umich-blue);
       color: var(--umich-maize);
       font-family: 'Computer Modern Sans', 'Open Sans', Arial, sans-serif;
-      font-size: 1.06em;
+      font-size: 1.02em;
       font-weight: bold;
-      border-radius: var(--border-radius);
-      padding: 0.4em 1.3em;
-      letter-spacing: 0.07em;
-      margin-top: 0.2em;
-      box-shadow: 4px 4px 0 #fff;
+      border-radius: 18px;
+      padding: 0.32em 1.1em;
+      margin-top: 0.6em;
+      margin-bottom: 0.2em;
+      letter-spacing: 0.03em;
+      align-self: flex-start;
     }
-    /* CTA Banner */
-    .cta-banner {
+    /* CTA */
+    .cta-row {
       width: 100%;
-      background: linear-gradient(90deg,var(--umich-blue) 60%,#fffbea 100%);
-      color: var(--umich-maize);
+      display: flex;
+      padding: 2.2em 0 1.3em 0;
+      background: none;
+      align-items: center;
+      gap: 1.2em;
+    }
+    .cta-text {
       font-family: 'Computer Modern Sans', 'Open Sans', Arial, sans-serif;
-      letter-spacing: 0.07em;
-      font-size: 1.19em;
+      color: var(--umich-blue);
+      font-size: 1.09em;
       font-weight: bold;
-      text-transform: uppercase;
-      text-align: left;
-      padding: 1.2em 2em 1.2em 2.7em;
-      box-shadow: 0 7px 0 var(--umich-maize);
-      margin-bottom: 0.3em;
-      border-radius: var(--border-radius);
-      border-bottom: 4px solid var(--umich-maize);
-      position: relative;
+      letter-spacing: 0.028em;
     }
     .cta-link {
-      color: var(--umich-maize);
-      background: var(--umich-blue);
-      text-decoration: none;
+      color: #fff;
+      background: var(--umich-maize);
       font-family: 'Computer Modern Sans', 'Open Sans', Arial, sans-serif;
       font-weight: bold;
-      font-size: 1.09em;
-      padding: 0.7em 2.2em;
-      margin-left: 2em;
-      border: 2px solid var(--umich-maize);
-      box-shadow: 4px 4px 0 var(--umich-maize);
-      text-transform: uppercase;
-      letter-spacing: 0.07em;
+      font-size: 1em;
+      padding: 0.72em 2.1em;
+      border-radius: 20px;
+      text-decoration: none;
+      margin-left: 0.2em;
+      border: none;
       transition: background .2s, color .2s;
+      letter-spacing: 0.03em;
+      box-shadow: none;
+      outline: none;
+      display: inline-block;
     }
-    .cta-link:hover,
-    .cta-link:focus {
-      background: var(--umich-maize);
-      color: var(--umich-blue);
-      border-color: var(--umich-blue);
+    .cta-link:hover, .cta-link:focus {
+      background: var(--umich-blue);
+      color: var(--umich-maize);
     }
-    /* Responsive */
-    @media (max-width:900px){
-      main, header, .site-header-content {max-width:100vw;}
-      .headline-block,
-      .value-grid,
-      .smart-section,
-      .relationship-section,
-      .cta-banner {padding-left:1em;padding-right:1em;}
-      .smart-grid {grid-template-columns:1fr;}
+    @media (max-width: 800px) {
+      .site-header-content,
+      main {
+        max-width: 98vw;
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+      .section-card, .relationship {
+        padding-left: 1em;
+        padding-right: 1em;
+      }
+      .cta-row { flex-direction:column;gap:0.7em;padding-left:0;padding-right:0;}
     }
-    @media (max-width:580px){
-      .headline-main {font-size:1.3em;}
-      .site-header-content {flex-direction:column;}
-      .smart-section,
-      .relationship-section,
-      .value-grid {padding-left:0.5em;padding-right:0.5em;}
-      .cta-banner {padding-left:0.7em;padding-right:0.7em;}
-      .logo {margin-right: 0;}
+    @media (max-width: 600px) {
+      .site-title { font-size:1.1rem;}
+      .section-card, .relationship, main { padding-left: 8px; padding-right: 8px;}
     }
   </style>
 </head>
@@ -327,68 +238,59 @@
   <header>
     <div class="site-header-content">
       <span class="logo" aria-label="2nd Street Appraisal logo">
-        <img src="img/Logo.png" alt="2nd Street Appraisal Company logo" width="56" height="56">
+        <img src="img/Logo.png" alt="2nd Street Appraisal Company logo" width="46" height="46">
       </span>
       <span class="site-title">Second Street Appraisal Company</span>
     </div>
   </header>
   <main>
-    <div class="banner-bar">Persuading action. Making connections. Fueling business growth.</div>
-
-    <section class="headline-block">
-      <div class="headline-main">Marketing That Moves People</div>
-      <div class="headline-sub">
-        Learn about us &mdash; talk about us &mdash; work with us.
+    <section class="section-card">
+      <div class="section-title">Distinct Relationship-Driven Value</div>
+      <div class="section-sub">
+        Different from competitors, we intentionally build relationships that outlast any transaction.
       </div>
-    </section>
-
-    <section class="value-grid">
-      <div class="value-prop-head">Our Value Proposition</div>
       <ul class="value-bullets">
-        <li>Building relationships beyond the dollar: personal, lasting connections.</li>
-        <li>Hands-on, collaborative, unafraid to do the work—scrubbing the floors included.</li>
-        <li>Creative problem-solving for large corporations wanting more than just “experience.”</li>
-        <li>Cost-effective, energetic, and absolutely not stuck in the past.</li>
+        <li>Personal, hands-on client experience that goes beyond industry norms.</li>
+        <li>Dedicated, detail-oriented team willing to do what others won’t.</li>
+        <li>Creative solutions for corporate clients with complex goals.</li>
+        <li>Low-overhead, responsive, and not stuck in the past.</li>
       </ul>
     </section>
-
-    <section class="smart-section">
-      <div class="smart-title">SMART Objectives</div>
-      <div class="smart-grid">
-        <div class="smart-card">
-          <div class="smart-title-in">Specific</div>
-          <div class="smart-desc">Educate, engage, and earn business from clients who value impact.</div>
+    <section class="section-card">
+      <div class="section-title">SMART Objectives</div>
+      <div class="smart-list">
+        <div class="smart-item">
+          <div class="smart-label">Specific</div>
+          <div>Educate, engage, and earn business from those who value impact.</div>
         </div>
-        <div class="smart-card">
-          <div class="smart-title-in">Measurable</div>
-          <div class="smart-desc">Track every conversation, referral, and contract signed.</div>
+        <div class="smart-item">
+          <div class="smart-label">Measurable</div>
+          <div>Track every conversation, referral, and contract signed.</div>
         </div>
-        <div class="smart-card">
-          <div class="smart-title-in">Attainable</div>
-          <div class="smart-desc">Set realistic, growth-minded targets—never settle.</div>
+        <div class="smart-item">
+          <div class="smart-label">Attainable</div>
+          <div>Set realistic, growth-minded targets.</div>
         </div>
-        <div class="smart-card">
-          <div class="smart-title-in">Relevant</div>
-          <div class="smart-desc">Solve the real issues for corporate clients, not just theorize.</div>
+        <div class="smart-item">
+          <div class="smart-label">Relevant</div>
+          <div>Design solutions for real corporate challenges—not just theory.</div>
         </div>
-        <div class="smart-card">
-          <div class="smart-title-in">Time-Bound</div>
-          <div class="smart-desc">Deliver meaningful results fast—while others coast.</div>
+        <div class="smart-item">
+          <div class="smart-label">Time-Bound</div>
+          <div>Deliver meaningful results faster than competitors.</div>
         </div>
       </div>
     </section>
-
-    <section class="relationship-section">
-      <div class="relation-title">We Do What Others Won't</div>
-      <div class="relation-lead">
-        Our competitors? High prices, old playbooks, slow moves. We are different: energetic, resourceful, and always hands-on—no matter how big the task. We move the needle, not just talk about it.
+    <section class="relationship">
+      <div class="relationship-title">What Sets Us Apart</div>
+      <div>
+        Unlike most firms—who rely on high prices and old playbooks—we deliver energetic service, resourceful execution, and a willingness to do the hard work, from strategy to implementation. We move the needle, not just talk about it.
       </div>
-      <span class="relation-badge">Growth Mindset &mdash; Real Actions</span>
+      <span class="relationship-badge">Actively Driven. Growth Mindset.</span>
     </section>
-
-    <div class="cta-banner">
-      Ready to move your business forward?
-      <a href="mailto:info@2ndstreetappraisal.com?subject=Let%27s%20Connect" class="cta-link">Let's Connect</a>
+    <div class="cta-row">
+      <span class="cta-text">Let’s move your project forward.</span>
+      <a href="mailto:info@2ndstreetappraisal.com?subject=Let%27s%20Connect" class="cta-link">Contact Us</a>
     </div>
   </main>
 </body>
