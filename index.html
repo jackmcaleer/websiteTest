@@ -10,13 +10,13 @@
     :root {
       --umich-blue: #00274C;
       --umich-maize: #FFCB05;
-      --section-max: 720px;
-      --side-pad: 32px;
+      --max-width: 700px;
+      --heading-gap: 2.5em;
     }
     body {
       font-family: 'Open Sans', Arial, sans-serif;
       background: #f6f7f9;
-      color: #202c3c;
+      color: var(--umich-blue);
       margin: 0;
     }
     header {
@@ -31,23 +31,17 @@
     .site-header-content {
       display: flex;
       align-items: center;
-      max-width: var(--section-max);
+      max-width: var(--max-width);
       margin: 0 auto;
-      padding: 1.1rem var(--side-pad);
+      padding: 1.1rem 28px;
       border-bottom: 2px solid var(--umich-maize);
-    }
-    .logo {
-      flex: 0 0 auto;
-      width: 46px;
-      height: 46px;
-      margin-right: 16px;
-      display: inline-block;
     }
     .logo img {
       width: 46px; height: 46px;
       vertical-align: middle;
       border-radius: 10px;
       background: #fff;
+      margin-right: 16px;
     }
     .site-title {
       font-family: 'Computer Modern Sans', 'Open Sans', Arial, sans-serif;
@@ -56,103 +50,85 @@
       letter-spacing: 0.04em;
       color: var(--umich-maize);
     }
-
     main {
-      max-width: var(--section-max);
+      max-width: var(--max-width);
       margin: 0 auto;
-      padding: 0 var(--side-pad);
-      display: flex;
-      flex-direction: column;
-      gap: 0;
+      padding: 0 28px;
       background: #f6f7f9;
     }
-
-    /* Sleek Sections */
-    .section-card {
-      background: #fff;
-      border-radius: 0;
-      border-left: 4px solid var(--umich-maize);
-      margin: 2.5em 0;
-      padding: 2em 2.1em;
-      box-sizing: border-box;
-      box-shadow: none;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
+    section {
+      margin-top: var(--heading-gap);
+      margin-bottom: var(--heading-gap);
     }
-    .section-title {
+    h1, h2, h3 {
       font-family: 'Computer Modern Sans', 'Open Sans', Arial, sans-serif;
-      font-size: 1.35em;
       font-weight: 700;
       color: var(--umich-blue);
-      margin-bottom: 0.8em;
+      margin-bottom: 0.5em;
       letter-spacing: 0.02em;
     }
-    .section-sub {
-      font-size: 1.05em;
+    h1 {
+      font-size: 2rem;
+      margin-top: 2em;
+    }
+    h2 {
+      font-size: 1.3rem;
+      margin-top: 1em;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid var(--umich-maize);
+      margin: 1.2em 0 2em 0;
+      width: 60px;
+      background: var(--umich-maize);
+    }
+    .lead {
+      font-size: 1.09em;
       color: #234356;
-      margin-bottom: 1.2em;
       font-weight: 500;
+      margin-bottom: 1.4em;
       line-height: 1.7;
     }
-    /* Value Grid */
-    .value-bullets {
-      margin: 0;
-      padding-left: 1em;
-      color: #234356;
+    ul, ol {
       font-size: 1.04em;
+      color: #234356;
     }
-    .value-bullets li {
+    ul.value-bullets {
+      margin: 0 0 1.7em 0;
+      padding-left: 1.2em;
+    }
+    ul.value-bullets li {
       margin-bottom: 1em;
-      position: relative;
-      line-height: 1.5;
-      font-weight: 500;
+      list-style: disc inside;
     }
-    .value-bullets li:before {
-      content: "";
-      display: inline-block;
-      width: 0.7em; height: 0.7em;
-      background: var(--umich-maize);
-      border-radius: 50%;
-      margin-right: 0.9em;
-      vertical-align: middle;
-      position: relative;
-      top: -1px;
-    }
-    /* SMART objectives horizontal list */
-    .smart-list {
+    .objectives-list {
       display: flex;
       flex-wrap: wrap;
-      gap: 2em;
-      margin: 1.5em 0 0.5em 0;
+      gap: 2.2em 2em;
+      margin-bottom: 2em;
+      margin-top: 1.1em;
     }
-    .smart-item {
-      background: #f9fafb;
-      border-radius: 0;
-      border-left: 3px solid var(--umich-blue);
-      min-width: 120px;
-      max-width: 180px;
-      padding: 1em 1.1em;
-      margin-bottom: 0.2em;
-      font-size: 1em;
+    .objective-item {
+      min-width: 150px;
+      font-size: 1.05em;
       color: #234356;
-      display: flex;
-      flex-direction: column;
+      line-height: 1.45;
+      border-left: 3px solid var(--umich-blue);
+      padding-left: 0.8em;
     }
-    .smart-label {
+    .objective-label {
       color: var(--umich-blue);
-      font-size: 1em;
-      font-weight: 700;
-      margin-bottom: 0.42em;
+      font-weight: bold;
       font-family: 'Computer Modern Sans', 'Open Sans', Arial, sans-serif;
+      margin-bottom: 0.2em;
+      display: block;
+      font-size: 0.98em;
     }
-    /* Relationship */
     .relationship {
       background: #fff;
       border-left: 4px solid var(--umich-maize);
-      border-radius: 0;
       margin: 2em 0 2.3em 0;
-      padding: 2em 2.1em;
+      padding: 1.7em 1.7em;
       box-sizing: border-box;
       color: #234356;
       display: flex;
@@ -160,7 +136,7 @@
     }
     .relationship-title {
       font-family: 'Computer Modern Sans', 'Open Sans', Arial, sans-serif;
-      font-size: 1.15em;
+      font-size: 1.08em;
       font-weight: bold;
       color: var(--umich-blue);
       margin-bottom: 1em;
@@ -169,10 +145,10 @@
       background: var(--umich-blue);
       color: var(--umich-maize);
       font-family: 'Computer Modern Sans', 'Open Sans', Arial, sans-serif;
-      font-size: 1.02em;
+      font-size: 1.01em;
       font-weight: bold;
-      border-radius: 18px;
-      padding: 0.32em 1.1em;
+      border-radius: 16px;
+      padding: 0.27em 1em;
       margin-top: 0.6em;
       margin-bottom: 0.2em;
       letter-spacing: 0.03em;
@@ -182,10 +158,9 @@
     .cta-row {
       width: 100%;
       display: flex;
-      padding: 2.2em 0 1.3em 0;
-      background: none;
       align-items: center;
       gap: 1.2em;
+      margin-bottom: 3em;
     }
     .cta-text {
       font-family: 'Computer Modern Sans', 'Open Sans', Arial, sans-serif;
@@ -200,14 +175,12 @@
       font-family: 'Computer Modern Sans', 'Open Sans', Arial, sans-serif;
       font-weight: bold;
       font-size: 1em;
-      padding: 0.72em 2.1em;
-      border-radius: 20px;
+      padding: 0.65em 2em;
+      border-radius: 16px;
       text-decoration: none;
-      margin-left: 0.2em;
       border: none;
       transition: background .2s, color .2s;
-      letter-spacing: 0.03em;
-      box-shadow: none;
+      letter-spacing: 0.02em;
       outline: none;
       display: inline-block;
     }
@@ -222,15 +195,19 @@
         padding-left: 12px;
         padding-right: 12px;
       }
-      .section-card, .relationship {
+      .relationship {
         padding-left: 1em;
         padding-right: 1em;
       }
-      .cta-row { flex-direction:column;gap:0.7em;padding-left:0;padding-right:0;}
+      .cta-row { flex-direction:column;gap:0.7em;}
     }
     @media (max-width: 600px) {
-      .site-title { font-size:1.1rem;}
-      .section-card, .relationship, main { padding-left: 8px; padding-right: 8px;}
+      .site-title { font-size:1.05rem;}
+      main { padding-left: 8px; padding-right: 8px;}
+      h1 { font-size:1.25em;}
+      .relationship {padding:1.1em;}
+      hr {margin-top:0.6em;}
+      .objectives-list{gap:1.2em;}
     }
   </style>
 </head>
@@ -244,9 +221,10 @@
     </div>
   </header>
   <main>
-    <section class="section-card">
-      <div class="section-title">Distinct Relationship-Driven Value</div>
-      <div class="section-sub">
+    <section>
+      <h1>Distinct Relationship-Driven Value</h1>
+      <hr>
+      <div class="lead">
         Different from competitors, we intentionally build relationships that outlast any transaction.
       </div>
       <ul class="value-bullets">
@@ -256,28 +234,29 @@
         <li>Low-overhead, responsive, and not stuck in the past.</li>
       </ul>
     </section>
-    <section class="section-card">
-      <div class="section-title">SMART Objectives</div>
-      <div class="smart-list">
-        <div class="smart-item">
-          <div class="smart-label">Specific</div>
-          <div>Educate, engage, and earn business from those who value impact.</div>
+    <section>
+      <h2>SMART Objectives</h2>
+      <hr>
+      <div class="objectives-list">
+        <div class="objective-item">
+          <span class="objective-label">Specific</span>
+          Educate, engage, and earn business from those who value impact.
         </div>
-        <div class="smart-item">
-          <div class="smart-label">Measurable</div>
-          <div>Track every conversation, referral, and contract signed.</div>
+        <div class="objective-item">
+          <span class="objective-label">Measurable</span>
+          Track every conversation, referral, and contract signed.
         </div>
-        <div class="smart-item">
-          <div class="smart-label">Attainable</div>
-          <div>Set realistic, growth-minded targets.</div>
+        <div class="objective-item">
+          <span class="objective-label">Attainable</span>
+          Set realistic, growth-minded targets.
         </div>
-        <div class="smart-item">
-          <div class="smart-label">Relevant</div>
-          <div>Design solutions for real corporate challenges—not just theory.</div>
+        <div class="objective-item">
+          <span class="objective-label">Relevant</span>
+          Design solutions for real corporate challenges—not just theory.
         </div>
-        <div class="smart-item">
-          <div class="smart-label">Time-Bound</div>
-          <div>Deliver meaningful results faster than competitors.</div>
+        <div class="objective-item">
+          <span class="objective-label">Time-Bound</span>
+          Deliver meaningful results faster than competitors.
         </div>
       </div>
     </section>
@@ -294,4 +273,3 @@
     </div>
   </main>
 </body>
-</html>
