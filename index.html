@@ -10,14 +10,15 @@
     :root {
       --umich-blue: #00274C;
       --umich-maize: #FFCB05;
-      --max-width: 700px;
-      --heading-gap: 2.5em;
+      --max-width: 1100px;
+      --heading-gap: 3em;
     }
     body {
       font-family: 'Open Sans', Arial, sans-serif;
       background: #f6f7f9;
       color: var(--umich-blue);
       margin: 0;
+      font-size: 1.14em;
     }
     header {
       background: var(--umich-blue);
@@ -33,27 +34,27 @@
       align-items: center;
       max-width: var(--max-width);
       margin: 0 auto;
-      padding: 1.1rem 28px;
+      padding: 1.3rem 40px;
       border-bottom: 2px solid var(--umich-maize);
     }
     .logo img {
-      width: 46px; height: 46px;
+      width: 54px; height: 54px;
       vertical-align: middle;
-      border-radius: 10px;
+      border-radius: 12px;
       background: #fff;
-      margin-right: 16px;
+      margin-right: 22px;
     }
     .site-title {
       font-family: 'Computer Modern Sans', 'Open Sans', Arial, sans-serif;
-      font-size: 1.65rem;
+      font-size: 2.2rem;
       font-weight: 700;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.045em;
       color: var(--umich-maize);
     }
     main {
       max-width: var(--max-width);
       margin: 0 auto;
-      padding: 0 28px;
+      padding: 0 40px;
       background: #f6f7f9;
     }
     section {
@@ -68,115 +69,122 @@
       letter-spacing: 0.02em;
     }
     h1 {
-      font-size: 2rem;
+      font-size: 2.7rem;
       margin-top: 2em;
     }
     h2 {
-      font-size: 1.3rem;
+      font-size: 1.65rem;
       margin-top: 1em;
     }
     hr {
       border: none;
       border-top: 2px solid var(--umich-maize);
-      margin: 1.2em 0 2em 0;
-      width: 60px;
+      margin: 1.3em 0 2.3em 0;
+      width: 80px;
       background: var(--umich-maize);
     }
     .lead {
-      font-size: 1.09em;
+      font-size: 1.28em;
       color: #234356;
       font-weight: 500;
-      margin-bottom: 1.4em;
-      line-height: 1.7;
+      margin-bottom: 1.6em;
+      line-height: 1.72;
+      max-width: 800px;
     }
     ul, ol {
-      font-size: 1.04em;
+      font-size: 1.15em;
       color: #234356;
     }
     ul.value-bullets {
-      margin: 0 0 1.7em 0;
+      margin: 0 0 2em 0;
       padding-left: 1.2em;
     }
     ul.value-bullets li {
-      margin-bottom: 1em;
+      margin-bottom: 1.1em;
       list-style: disc inside;
+      line-height: 1.57;
     }
     .objectives-list {
       display: flex;
       flex-wrap: wrap;
-      gap: 2.2em 2em;
+      gap: 2.4em 2.3em;
       margin-bottom: 2em;
-      margin-top: 1.1em;
+      margin-top: 1.2em;
+      max-width: 950px;
     }
     .objective-item {
-      min-width: 150px;
-      font-size: 1.05em;
+      min-width: 175px;
+      font-size: 1.09em;
       color: #234356;
-      line-height: 1.45;
-      border-left: 3px solid var(--umich-blue);
-      padding-left: 0.8em;
+      line-height: 1.5;
+      border-left: 4px solid var(--umich-blue);
+      padding-left: 1em;
     }
     .objective-label {
       color: var(--umich-blue);
       font-weight: bold;
       font-family: 'Computer Modern Sans', 'Open Sans', Arial, sans-serif;
-      margin-bottom: 0.2em;
+      margin-bottom: 0.22em;
       display: block;
-      font-size: 0.98em;
+      font-size: 1.09em;
     }
     .relationship {
       background: #fff;
-      border-left: 4px solid var(--umich-maize);
-      margin: 2em 0 2.3em 0;
-      padding: 1.7em 1.7em;
+      border-left: 5px solid var(--umich-maize);
+      margin: 2.2em 0 3em 0;
+      padding: 2.4em 2.4em;
       box-sizing: border-box;
       color: #234356;
       display: flex;
       flex-direction: column;
+      max-width: 900px;
     }
     .relationship-title {
       font-family: 'Computer Modern Sans', 'Open Sans', Arial, sans-serif;
-      font-size: 1.08em;
+      font-size: 1.28em;
       font-weight: bold;
       color: var(--umich-blue);
-      margin-bottom: 1em;
+      margin-bottom: 1.3em;
     }
     .relationship-badge {
       background: var(--umich-blue);
       color: var(--umich-maize);
       font-family: 'Computer Modern Sans', 'Open Sans', Arial, sans-serif;
-      font-size: 1.01em;
+      font-size: 1.09em;
       font-weight: bold;
       border-radius: 16px;
-      padding: 0.27em 1em;
-      margin-top: 0.6em;
+      padding: 0.38em 1.2em;
+      margin-top: 0.9em;
       margin-bottom: 0.2em;
       letter-spacing: 0.03em;
       align-self: flex-start;
+      box-shadow: none;
     }
     /* CTA */
     .cta-row {
       width: 100%;
       display: flex;
       align-items: center;
-      gap: 1.2em;
+      gap: 1.7em;
       margin-bottom: 3em;
+      margin-top: 1em;
+      font-size: 1.15em;
     }
     .cta-text {
       font-family: 'Computer Modern Sans', 'Open Sans', Arial, sans-serif;
       color: var(--umich-blue);
-      font-size: 1.09em;
+      font-size: inherit;
       font-weight: bold;
-      letter-spacing: 0.028em;
+      letter-spacing: 0.03em;
     }
     .cta-link {
       color: #fff;
       background: var(--umich-maize);
       font-family: 'Computer Modern Sans', 'Open Sans', Arial, sans-serif;
       font-weight: bold;
-      font-size: 1em;
-      padding: 0.65em 2em;
-      border-radius: 16px;
+      font-size: inherit;
+      padding: 0.7em 2.2em;
+      border-radius: 19px;
       text-decoration: none;
       border: none;
       transition: background .2s, color .2s;
@@ -188,26 +196,33 @@
       background: var(--umich-blue);
       color: var(--umich-maize);
     }
-    @media (max-width: 800px) {
-      .site-header-content,
+    /* Responsive */
+    @media (max-width: 1200px) {
       main {
+        max-width: 100vw;
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+      .site-header-content, .relationship {
         max-width: 98vw;
-        padding-left: 12px;
-        padding-right: 12px;
       }
-      .relationship {
-        padding-left: 1em;
-        padding-right: 1em;
-      }
+      .objectives-list {max-width:100vw;}
+    }
+    @media (max-width: 800px) {
+      main, .site-header-content, .relationship {padding-left:1em;padding-right:1em;}
+      .relationship {padding:1em;}
       .cta-row { flex-direction:column;gap:0.7em;}
+      h1 { font-size:2em;}
+      h2 { font-size:1.2em;}
+      .lead, ul, ol, .cta-row {font-size:1em;}
     }
     @media (max-width: 600px) {
-      .site-title { font-size:1.05rem;}
-      main { padding-left: 8px; padding-right: 8px;}
-      h1 { font-size:1.25em;}
-      .relationship {padding:1.1em;}
-      hr {margin-top:0.6em;}
-      .objectives-list{gap:1.2em;}
+      main { padding-left: 6px; padding-right: 6px;}
+      .site-header-content {padding-left:6px;padding-right:6px;}
+      h1 { font-size:1.22em;}
+      .relationship {padding:0.7em;}
+      hr {margin-top:0.4em;}
+      .objectives-list{gap:1em;}
     }
   </style>
 </head>
@@ -215,7 +230,7 @@
   <header>
     <div class="site-header-content">
       <span class="logo" aria-label="2nd Street Appraisal logo">
-        <img src="img/Logo.png" alt="2nd Street Appraisal Company logo" width="46" height="46">
+        <img src="img/Logo.png" alt="2nd Street Appraisal Company logo" width="54" height="54">
       </span>
       <span class="site-title">Second Street Appraisal Company</span>
     </div>
@@ -273,3 +288,4 @@
     </div>
   </main>
 </body>
+</html>
